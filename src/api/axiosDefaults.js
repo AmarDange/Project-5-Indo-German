@@ -1,0 +1,5 @@
+import axios from "axios";
+
+axios.defaults.baseURL = " https://indo-german-932e214b60bd.herokuapp.com";
+axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
+axios.defaults.withCredentials = true;
