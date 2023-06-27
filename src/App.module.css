@@ -1,11 +1,12 @@
 .App {
-  font-family: "DM Sans", sans-serif;
-  background-color: #f8f8f8;
-  min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    background-color: #eff5fa;
+    min-height: 100vh;
 }
 
 .Main {
-  padding-top: 81px;
+    padding-top: 90px;
+    padding-bottom: 85px;
 }
 
 .Content {
