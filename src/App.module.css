@@ -1,6 +1,6 @@
 .App {
     font-family: 'Raleway', sans-serif;
-    background-color: #eff5fa;
+    background-color: #ffffff;
     min-height: 100vh;
 }
 
@@ -51,7 +51,7 @@ input[type="file"] {
 }
 
 i {
-  color: #cfced3;
+  color: #000000;
   font-size: 1.6rem;
   padding: 7px;
   vertical-align: middle;

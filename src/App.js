@@ -14,7 +14,7 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -77,7 +77,7 @@ function App() {
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

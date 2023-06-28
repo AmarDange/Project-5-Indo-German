@@ -1,4 +1,71 @@
-.NavBar {
+/* .NavBar {
     background-color: #ffffff;
     border: 1px solid #dadadf;
-  }
+  } */
+
+
+.NavBar {
+    background-color: #ffc107;
+    border: 1px solid #dadadf;
+}
+
+
+.NavBarBrand {
+    font-size: xx-large;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.NavItems {
+    font-size: large;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+.NavLink {
+    padding: 10px;
+    color: black;
+}
+
+.Active {
+    color: blue;
+}
+
+.Active i {
+    color: blue;
+}
+
+@media all and (max-width: 991px) {
+    .NavBarBrand {
+        font-size: x-large;
+        padding-left: 20px;
+    }
+
+    .NavItems {
+        font-size: medium;
+    }
+}
+
+@media all and (max-width: 468px) {
+    .NavBarBrand {
+        font-size: x-large;
+        padding-left: 0px;
+    }
+
+
+}
+
+@media all and (max-width: 312px) {
+    .NavBarBrand {
+        font-size: 1.2em;
+    }
+    .NavBarBrand img {
+        width: 30%;
+    }
+    .NavItems {
+        font-size: small;
+        padding-left: 0px;
+    }
+}
