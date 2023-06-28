@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "../styles/Avatar.module.css";
 
+/*
+* Avatar component with default height prop
+* Credit: CI "Moments" Walkthrough
+*/
+
 const Avatar = ({ src, height = 45, text }) => {
   return (
     <span>
@@ -9,7 +14,7 @@ const Avatar = ({ src, height = 45, text }) => {
         src={src}
         height={height}
         width={height}
-        alt="avatar"
+        alt=""
       />
       {text}
     </span>

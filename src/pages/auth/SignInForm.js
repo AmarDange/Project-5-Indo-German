@@ -124,17 +124,17 @@
 
 
 import React, { useState } from "react";
-import styles from "../../styles/SignInUpForm.module.css";
+import styles from "../../styles/SignInForm.module.css";
 import logoImage from "../../assets/logo.jpg";
 import btnStyles from "../../styles/Button.module.css";
-import shadowStyles from "../../App.module.css";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+// import shadowStyles from "../../App.module.css";
+import {Form, Button, Container, Alert} from 'react-bootstrap';
+// /
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
+// import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
-import Alert from "react-bootstrap/Alert";
+// import Alert from "react-bootstrap/Alert";
 import axios from "axios";
 import { Link, useHistory } from "react-router-dom";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
@@ -180,7 +180,8 @@ const LoginForm = () => {
   };
 
   return (
-    <Container className={`bg-white col-md-8 ${shadowStyles.Shadow}`}>
+    <Container className={styles.Container}>
+    {/* <Container className={`bg-white col-md-8 ${shadowStyles.Shadow}`}> */}
       <Row className="p-4 mt-5 justify-content-md-center">
         <Col className="text-center">
           <Image className={styles.LogoImage} src={logoImage} />

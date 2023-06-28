@@ -143,7 +143,7 @@
 
 // Sign up form functionality credit goes to CI's Moments Project
 import React, { useState } from "react";
-import styles from "../../styles/SignInUpForm.module.css";
+import styles from "../../styles/SignUpForm.module.css";
 import logoImage from "../../assets/logo.jpg";
 import btnStyles from "../../styles/Button.module.css";
 // import shadowStyles from "../../App.module.css";

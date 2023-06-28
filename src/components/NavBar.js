@@ -10,6 +10,7 @@ import {
 import Avatar from "./Avatar";
 import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
+// import { removeTokenTimestamp } from "../utils/utils";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
@@ -21,6 +22,7 @@ const NavBar = () => {
     try {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
+      // removeTokenTimestamp();
     } catch (err) {
       console.log(err);
     }
@@ -32,7 +34,7 @@ const NavBar = () => {
       activeClassName={styles.Active}
       to="/posts/create"
     >
-      <i className="far fa-plus-square"></i>Add post
+      {/* <i className="far fa-plus-square"></i>Add post */}
     </NavLink>
   );
   const loggedInIcons = (
@@ -91,7 +93,7 @@ const NavBar = () => {
       <Container>
         <NavLink to="/">
           <Navbar.Brand>
-            <img src={logo} alt="logo" height="50" width="60" /> Indo German
+            <img src={logo} alt="logo" height="45" /> Indo German
           </Navbar.Brand>
         </NavLink>
         {currentUser && addPostIcon}
