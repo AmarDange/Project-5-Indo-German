@@ -30,7 +30,7 @@ const LandingPage = () => {
                         <div className="text-center mt-3" >
                             <h4 className="mb-3">Welcome to "Indo German" <br /> Share your experience </h4>
 
-                            <h6> Are looking for an share your experience or frinedly, useful post for India's or Germany's Culture or anything which comes in mind?
+                            <h6> Are you looking for an share your experience or frinedly, useful post for India's or Germany's Culture or anything which comes in mind?
                                 Then this is the right place for you!!
                             </h6>
                             <br />

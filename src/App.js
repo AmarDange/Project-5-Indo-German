@@ -3,7 +3,6 @@ import NavBar from "./components/NavBar";
 import Container from "react-bootstrap/Container";
 import { Route, Switch } from "react-router-dom";
 import "./api/axiosDefaults";
-import LandingPage from './components/LandingPage';
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import PostCreateForm from "./pages/posts/PostCreateForm";
@@ -15,8 +14,6 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
-// import Footer from "./Footer";
-import About from "./pages/about/About";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -26,15 +23,6 @@ function App() {
     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Main}>
-
-      {!currentUser ? (
-        <Switch>
-          <Route exact path="/" render={() => <LandingPage />} />
-          <Route exact path="/signup" render={() => <SignUpForm />} />
-          <Route exact path="/signin" render={() => <SignInForm />} />
-          <Route render={() => <LandingPage />} />
-        </Switch>
-        ) : (
         <Switch>
           <Route
             exact
@@ -43,7 +31,6 @@ function App() {
               <PostsPage message="No results found. Adjust the search keyword." />
             )}
           />
-          <Route exact path="/about" element={<About />} />
           <Route
             exact
             path="/feed"
@@ -87,13 +74,10 @@ function App() {
           />
 
           <Route render={() => <p>Page not found!</p>} />
-          </Switch>
-      )}
+        </Switch>
       </Container>
     </div>
   );
 }
 
-
 export default App;
-
