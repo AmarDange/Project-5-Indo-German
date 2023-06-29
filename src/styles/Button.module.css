@@ -56,11 +56,11 @@
   
   .Black:hover,
   .BlackOutline {
-    /* background-color: #dadadf;
+    background-color: #dadadf;
     color: #242a3d;
-    border-color: #242a3d; */
-    background-color: aliceblue;
-    color: #242a3d;
+    border-color: #242a3d;
+    /* background-color: aliceblue;
+    color: #242a3d; */
   }
   
   .Bright {

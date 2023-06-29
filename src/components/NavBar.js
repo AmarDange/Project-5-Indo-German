@@ -34,7 +34,7 @@ const NavBar = () => {
       activeClassName={styles.Active}
       to="/posts/create"
     >
-      <i className="far fa-plus-square"></i>Add post
+      {/* <i className="far fa-plus-square"></i>Create post */}
     </NavLink>
   );
   const loggedInIcons = (
@@ -44,7 +44,7 @@ const NavBar = () => {
         activeClassName={styles.Active}
         to="/feed"
       >
-        <i className="fas fa-stream"></i>Feed
+        <i className="fa-solid fa-rss"></i>Feed
       </NavLink>
       <NavLink
         className={styles.NavLink}
