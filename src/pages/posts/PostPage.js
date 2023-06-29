@@ -100,6 +100,7 @@ function PostPage() {
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
   const [comments, setComments] = useState({ results: [] });
+  
 
   useEffect(() => {
     const handleMount = async () => {

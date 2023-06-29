@@ -72,8 +72,8 @@
 
 
 .NavBar {
-    background-color: #ffb449;
-    border: 1px solid #dadadf;
+    background-color:orange;
+    border: 1px solid #000000;
 }
 
 
@@ -98,11 +98,11 @@
 }
 
 .Active {
-    color: blue;
+    color: rgb(0, 0, 0);
 }
 
 .Active i {
-    color: blue;
+    color: rgb(0, 0, 0);
 }
 
 @media all and (max-width: 991px) {

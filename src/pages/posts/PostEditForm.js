@@ -20,10 +20,11 @@ function PostEditForm() {
 
   const [postData, setPostData] = useState({
     title: "",
+    category: "",
     content: "",
     image: "",
   });
-  const { title, content, image } = postData;
+  const { title, category, content, image } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -33,9 +34,9 @@ function PostEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/posts/${id}/`);
-        const { title, content, image, is_owner } = data;
+        const { title, category, content, image, is_owner } = data;
 
-        is_owner ? setPostData({ title, content, image }) : history.push("/");
+        is_owner ? setPostData({ title, category, content, image }) : history.push("/");
       } catch (err) {
         console.log(err);
       }
@@ -66,6 +67,7 @@ function PostEditForm() {
     const formData = new FormData();
 
     formData.append("title", title);
+    formData.append("category", category);
     formData.append("content", content);
 
     if (imageInput?.current?.files[0]) {
@@ -94,11 +96,38 @@ function PostEditForm() {
           onChange={handleChange}
         />
       </Form.Group>
+      
       {errors?.title?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
       ))}
+
+
+      <Form.Group>
+      <Form.Label>Which category defines it the best?</Form.Label>
+          <Form.Control
+            as="select"
+            aria-label="category"
+            value={category}
+            name="category"
+            onChange={handleChange}
+          >
+            <option value="Select a category">Select a category</option>
+            <option value="India">India</option>
+            <option value="Germany">Germany</option>
+            <option value="Culture">Culture</option>
+            <option value="Place">Place</option>
+            <option value="Food">Food</option>
+            <option value="Visa">Visa</option>
+          <option value="other">Other</option>
+          </Form.Control>
+        </Form.Group>
+                {errors.category?.map((message, idx) => (
+                    <Alert variant="warning" key={idx}>
+                        {message}
+                    </Alert>
+                ))}
 
       <Form.Group>
         <Form.Label>Content</Form.Label>
@@ -116,6 +145,27 @@ function PostEditForm() {
         </Alert>
       ))}
 
+
+        <Form.Group>
+        <Form.Label>About me</Form.Label>
+        <Form.Control
+          as="textarea"
+          rows={6}
+          name="content"
+          value={content}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors?.content?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
+
+
+
+
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
@@ -128,6 +178,8 @@ function PostEditForm() {
     </div>
   );
 
+
+        
   return (
     <Form onSubmit={handleSubmit}>
       <Row>

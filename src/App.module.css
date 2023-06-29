@@ -1,6 +1,6 @@
 .App {
     font-family: 'Raleway', sans-serif;
-    background-color: #ffffff;
+    background-color: #e0f7fa;
     min-height: 100vh;
 }
 
@@ -33,7 +33,7 @@
 }
 
 a {
-  color: #555555;
+  color: #000000;
   transition: color ease-in-out 0.3s;
 }
 

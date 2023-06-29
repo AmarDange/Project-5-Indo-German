@@ -112,6 +112,16 @@ const NavBar = () => {
             >
               <i className="fas fa-home"></i>Home
             </NavLink>
+            
+            {/* <NavLink
+              exact
+              className={styles.NavLink}
+              activeClassName={styles.Active}
+              to="/"
+            >
+              <i className="fa-solid fa-circle-question"></i>About
+            </NavLink> */}
+            
 
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>

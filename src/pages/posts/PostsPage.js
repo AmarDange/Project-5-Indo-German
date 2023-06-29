@@ -155,13 +155,13 @@ function PostsListPage({ message, filter = "" }) {
                   >
                       <h4 className={`${styles.Header} text-center mt-2`}> Categories</h4>
                       <hr />
-                      <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Books")}>Books</Badge>
-                      <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Music")}>Music</Badge>
-                      <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Person")}>Person</Badge>
+                      <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("India")}>India</Badge>
+                      <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Germany")}>Germany</Badge>
+                      <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Culture")}>Culture</Badge>
                       <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Place")}>Place</Badge>
-                      <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Art")}>Art</Badge>
-                      <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Event")}>Event</Badge>
-                      <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Movies")}>Movies</Badge>
+                      <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Food")}>Food</Badge>
+                      <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Visa")}>Visa</Badge>
+                      <Badge variant="secondary" pill className={`${styles.Badge}`} onClick={() => setCategory("Other")}>Other</Badge>
                   </Container>
               </Col>
 

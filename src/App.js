@@ -16,6 +16,7 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 // import Footer from "./Footer";
+import About from "./pages/about/About";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -42,6 +43,7 @@ function App() {
               <PostsPage message="No results found. Adjust the search keyword." />
             )}
           />
+          <Route exact path="/about" element={<About />} />
           <Route
             exact
             path="/feed"
