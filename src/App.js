@@ -33,7 +33,7 @@ function App() {
               <PostsPage message="No results found. Adjust the search keyword." />
             )}
           />
-          
+          <Route exact path="/about" render={() => <About />} />
           <Route
             exact
             path="/feed"

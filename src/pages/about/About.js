@@ -13,21 +13,21 @@ const About = () => {
       <Row className="p-4 mt-5 justify-content-md-center">
         <Col className="text-center">
           <Container>
-            <i className="fa-solid fa-question"></i>
+            <i className="fa-solid fa"></i>
             <Image src={logoImage} className={styles.LogoImage} />
-            <h1 className="mb-3">What is Indo German?</h1>
+            <h1 className="mb-3">Welcome to Indo German</h1>
             <p className="text-left">
               Indo german is a social media platform where you can post about
-              anything you wish! Think of this website as open network. Sign up with a new account (no email address required for
-              those who don't want to compromise personal data) as easy as 1, 2,
-              3. Once you're logged in, you have the option to create a post
+              anything you wish! This website is open network where you can put about your experince from germany, India, about culture, Food.
+              Sign up with a new account (no email address required for
+              those who don't want to compromise personal data). Once you're logged in, you have the option to create a post
               (post about anything you want!). Add a photo to your post, a
               title, and some content. There are no character limits for
               content, but the title will have a limit of 300 characters. Photos
               will be required for your post! Don't have a photo? Show us a
               photo of a cat you walked past the other day. You can like
-             other user's posts, make comments, follow other users,
-              and comments! Ypu can track your liked post. Once you start
+              other user's posts, make comments, follow other users,
+              and comments! You can track your liked post. Once you start
               following users, their posts will show up in the "Feed" link in
               navigation. You can also manage your profile and change your
               profile photo if you wish. Most importantly, you have the freedom
