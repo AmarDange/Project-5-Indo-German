@@ -26,11 +26,10 @@ function PostCreateForm() {
 
   const [postData, setPostData] = useState({
     title: "",
-    category: "",
     content: "",
     image: "",
   });
-  const { title, category, content, image } = postData;
+  const { title, content, image } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -57,7 +56,6 @@ function PostCreateForm() {
     const formData = new FormData();
 
     formData.append("title", title);
-    formData.append("category", category);
     formData.append("content", content);
     formData.append("image", imageInput.current.files[0]);
 
@@ -106,30 +104,7 @@ function PostCreateForm() {
       ))}
 
 
-      <Form.Group>
-          <Form.Label>Which category defines it the best?</Form.Label>
-          <Form.Control
-            as="select"
-            aria-label="category"
-            value={category}
-            name="category"
-            onChange={handleChange}
-          >
-          <option value="Select a category">Select a category</option>
-          <option value="India">India</option>
-          <option value="Germany">Germany</option>
-          <option value="Culture">Culture</option>
-          <option value="Place">Place</option>
-          <option value="Food">Food</option>
-          <option value="Visa">Visa</option>
-          <option value="other">Other</option>
-          </Form.Control>
-      </Form.Group>
-            {errors.category?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
-                {message}
-              </Alert>
-        ))}                         
+                
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}

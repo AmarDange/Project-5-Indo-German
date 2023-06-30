@@ -32,28 +32,28 @@ const LeftPanel = ({ mobile }) => {
                 className={`${styles.NavLink} p-2`}
                 to={`/profiles/${currentUser?.profile_id}/edit`}
             >
-                <i className="far fa-plus-square"></i> Profile
+                <i className="far fa-plus-square"></i>Profile
             </Link>
             <br />
             <Link
                 className={`${styles.NavLink} p-2`}
                 to="/posts/create"
             >
-                <i className="far fa-plus-square"></i> Posts
+                <i className="far fa-plus-square"></i>Posts
             </Link>
             <br />
-            {/* <Link
+            <Link
                 className={`${styles.NavLink} p-2`}
-                to="/recommendations/create"
+                to="/Liked"
             >
-                <i className="far fa-plus-square"></i> Recommendations
-            </Link> */}
-        </>
+                <i className="fa fa-heart"></i>Liked
+            </Link>
+            </>
     );
 
     const loggedOutIcons = (
         <>
-            <p>Unlock <a href="/signup"><i className="fa-solid fa-lock"></i></a> and inspire..</p>
+            <p>Unlock <a href="/signup"><i className="fa-solid fa-lock"></i></a> and Create..</p>
             <p>Or use the key <a href="/signin"><i className="fa-solid fa-key"></i></a></p>
         </>
     );
@@ -62,7 +62,7 @@ const LeftPanel = ({ mobile }) => {
         <Container
             className={`${appStyles.Content} ${mobile && styles.CollapsedColumn} mb-3 ${styles.CreatePanel}`}
         >
-            <h4 className='text-center  mt-2'>Create and Inspire!</h4>
+            <h4 className='text-center  mt-2'> My Indo German !</h4>
             <div><hr></hr></div>
             <div className='font-weight-bold '>
                 {currentUser ? loggedInIcons : loggedOutIcons}
