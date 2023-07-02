@@ -16,6 +16,7 @@ import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 // import Footer from "./Footer";
 import About from "./pages/about/About";
+import LandingPage from './components/LandingPage';
 
 function App() {
   const currentUser = useCurrentUser();
@@ -25,6 +26,14 @@ function App() {
     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Main}>
+      {!currentUser ? (
+      <Switch>
+          <Route exact path="/" render={() => <LandingPage />} />
+          <Route exact path="/signup" render={() => <SignUpForm />} />
+          <Route exact path="/signin" render={() => <SignInForm />} />
+          <Route render={() => <LandingPage />} />
+        </Switch>
+      ) : (
         <Switch>
           <Route
             exact
@@ -61,24 +70,14 @@ function App() {
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
           <Route exact path="/about" element={<About />} />
-          <Route
-            exact
-            path="/profiles/:id/edit/username"
-            render={() => <UsernameForm />}
-          />
-          <Route
-            exact
-            path="/profiles/:id/edit/password"
-            render={() => <UserPasswordForm />}
-          />
-          <Route
-            exact
-            path="/profiles/:id/edit"
-            render={() => <ProfileEditForm />}
-          />
+          <Route exact path="/profiles/:id/edit/username" render={() => <UsernameForm />} />
+          <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />} />
+          <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />} />
+         
 
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
+      )}
       </Container>
     </div>
   );
