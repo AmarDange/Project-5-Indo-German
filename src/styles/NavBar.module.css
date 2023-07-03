@@ -1,7 +1,7 @@
 
 
 .NavBar {
-    background-color:orange;
+    background-color:#ffc107;
     border: 1px solid #000000;
 }
 
@@ -20,6 +20,7 @@
     text-transform: uppercase;
     font-weight: 500;
     padding-left: 250px;
+    
    
     
 }

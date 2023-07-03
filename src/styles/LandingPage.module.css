@@ -1,5 +1,5 @@
 .LandingImage {
-    height: 450px;
+    height: 400px;
   }
   
  .Button {
@@ -35,15 +35,15 @@
   background-color: orange;
 }
 
-  .footer {
+.footer {
     display: flow-root;
     margin-top: 20px;
-  }
+}
   
-  .footer p {
-    margin-bottom: 0;
-    padding-top: 7px;
-  }
+.footer p {
+    margin-bottom: 0px;
+    padding-top: 5px;
+}
   
   
   /* Adjust landing page image size on smaller screens */

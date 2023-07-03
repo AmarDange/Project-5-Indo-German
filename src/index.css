@@ -14,7 +14,7 @@ code {
 
 .footer {
   margin-top: 1rem;
-  padding: 1rem;
+  /* padding: 1rem; */
   background-color: #ffc107;
   color: white;
   text-align: center;
