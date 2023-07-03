@@ -17,13 +17,14 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 // import Footer from "./Footer";
 import About from "./pages/about/About";
 import LandingPage from './components/LandingPage';
+import PageNotFound from './components/PageNotFound';
 
 function App() {
   const currentUser = useCurrentUser();
   const profile_id = currentUser?.profile_id || "";
 
   return (
-    <div className={styles.App}>
+     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Main}>
       {!currentUser ? (
@@ -75,7 +76,7 @@ function App() {
           <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />} />
          
 
-          <Route render={() => <p>Page not found!</p>} />
+          <Route render={() => <PageNotFound />} />
         </Switch>
       )}
       </Container>

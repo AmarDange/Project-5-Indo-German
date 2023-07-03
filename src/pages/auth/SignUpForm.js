@@ -274,7 +274,7 @@ const SignUpForm = () => {
                 <Link
                   className={styles.Link}
                   aria-label="Click here to log in instead"
-                  to="/login"
+                  to="/signin"
                 >
                   Login
                 </Link>

@@ -522,14 +522,14 @@ User stories covered:
 **Navigation Bar, Footer, and Authentication Tests**: 
 
 - Navigation bar correctly shows "Home", "About", "Sign Up", and "Login" links at the top when the user is logged out.
-- Navigation bar correctly shows "Home", "About", "Feed", "Create Post", "Reyakked", and "Log out" links at the top when the user is logged in. Navigation bar also shows current logged-in user's username and avatar at the top beside the logo.
+- Navigation bar correctly shows "Home", "About", "Feed", "Create Post", "Feed", and "Log out" links at the top when the user is logged in. Navigation bar also shows current logged-in user's username and avatar at the top beside the logo.
 - Logged-in users successfully get redirected to homepage when trying to access `/login` or `/signup` urls.
 - Navigation bar correctly collapses in smaller screens into a hamburger icon and toggles correctly, and untoggles when user clicks away.
 - Navigation bar is correctly fixed at the top of the page regardless of user scrolling.
 - Footer is correctly fixed at the bottom fo the page regardless of user scrolling.
 - External link in footer successfully opens in a new blank page. 
 - When user is logged in, the "Feed" link will show posts by users they follow.
-- When user is logged in, the "Reyakked" link will show all the posts the user reyakked. 
+- When user is logged in, the "Feed" link will show all the posts the user liked. 
 - Clicking log out will successfully log out the user, and users will know they are logged out as their username will no longer be at the top.
 - If user logs in with incorrect details, they will be prompted with a message.
 - If user tries to sign up with any fields missing, they will be prompted with a message that fields need to be added.
@@ -538,18 +538,18 @@ User stories covered:
 **Homepage Tests**
 
 - Infinite scroll successfully works as the page will produce more posts when more than ten posts are present.
-- The lists of posts are all shown, with the author, date updated, author avatar, post title, image, content, number of reyakks and comments present.
+- The lists of posts are all shown, with the author, date updated, author avatar, post title, image, content, number of likes and comments present.
 - Author and avatar of posts are able clickable and will redirect user to profile page of that user.
-- If user is logged out, hovering over reyakk button will prompt user to log in.
-- If user is logged in and NOT the author of the post, user is able to hover over reyakk button and choose to reyakk or unreyakk.
-- If user is logged in and IS the author of the post, a message will tell user they are not able to reyakk to their own posts.
-- Number of reyakks on the post will update accordingly and in real-time. 
-- All reyakked posts by a user will show up in the "Reyakked" link in navigation.
-- Popular Yakfiles are present on the right side on larger screens, and present at the top on smaller screens as well as the bottom to follow users. Popular Yakfiles correctly update based on who has the highest number of followers. Each username is clickable and will direct user to the profile page of the desired user. 
-- If users are logged in, the users they do not already follow will have a 'Follow' button beside the username in Popular Yakfiles.
-- If users are logged in, the users that they do follow will have an 'Unfollow' button beside the username in Popular Yakfiles.
+- If user is logged out, hovering over like button will prompt user to log in.
+- If user is logged in and NOT the author of the post, user is able to hover over like button and choose to like or unlike.
+- If user is logged in and IS the author of the post, a message will tell user they are not able to like to their own posts.
+- Number of likes on the post will update accordingly and in real-time. 
+- All liked posts by a user will show up in the "feed" link in navigation.
+- Popular Profiles are present on the right side on larger screens, and present at the top on smaller screens as well as the bottom to follow users. Popular Profiles correctly update based on who has the highest number of followers. Each username is clickable and will direct user to the profile page of the desired user. 
+- If users are logged in, the users they do not already follow will have a 'Follow' button beside the username in Popular Profiles.
+- If users are logged in, the users that they do follow will have an 'Unfollow' button beside the username in Popular Profiles.
 - Users are successfully able to search for posts based on content, title, and author. The search will take one second after the user stops typing before conducting the search. 
-- When the page is loading (the posts, the Popular Yakfiles, or when they type in a search field), the Bootstrap spinner shows successfully.
+- When the page is loading (the posts, the Popular profiles, or when they type in a search field), the Bootstrap spinner shows successfully.
 - Homepage is fully responsive. 
 
 **Post Tests**
@@ -561,7 +561,7 @@ User stories covered:
 - Created posts successfully show up on the homepage with the correct date, username, and content shown. The newest post will always be shown at the top of homepage. 
 - Avatar and username of posts are clickable and will redirect user to the profile page.
 - Titles of the posts are clickable and will redirect user to the detailed post page. The correct post will show according to the post id: `/post/{id}`.
-- Reyakk functionality works exactly the same in detailed post view as well as homepage.
+- Likek functionality works exactly the same in detailed post view as well as homepage.
 - Comments linked to the post will show in the detailed post page (Comment tests will be discussed next).
 - Authors of the post can see the icon where they can choose to edit or delete their posts. Prompt messages will show as a ToolTip.
 - Author posts are successfully deleted when author clicks delete.
@@ -573,13 +573,13 @@ User stories covered:
 - Posts with no comments will have a message that prompts the user to log in to leave a comment. If the user is logged in, it will prompt the user to leave a comement. If the user is logged out, it will prompt the user to login first.
 - The comment field successfully shows the logged-in username in the content placeholder, as well as their avatar. 
 - All comments on an associated post will be shown newest first. Infinite scroll works successfully as more than ten comments will load.
-- Logged-in users will be able to reyakk to comments. 
-- Logged-in users will be able to hover the reyakk icon where it will turn red. Comments will be successfully reyakked when clicked, or unreyakked when click. Immediate results will show. 
-- If the author of the comment tries to reyakk to their own post, a message will show stating that users cannot reyakk to their own comments.
-- If logged-out users try to reyakk to comments, a message will show stating to log in to reyakk to comments.
+- Logged-in users will be able to like to comments. 
+- Logged-in users will be able to hover the like icon where it will turn red. Comments will be successfully like when clicked, or unlike when click. Immediate results will show. 
+- If the author of the comment tries to like to their own post, a message will show stating that users cannot like to their own comments.
+- If logged-out users try to like to comments, a message will show stating to log in to like to comments.
 - Bootstrap spinner successfully shows when comments are being retrieved. 
 - Number of comments on the post will update accordingly to the number of comments there are.
-- Number of reyakks on the comment will update accordingly to the number of reyakks there are.
+- Number of like on the comment will update accordingly to the number of likes there are.
 - Users are successfully able to delete their comments and edit their comments.
 - Only authors of the comment can view the icons where they can edit or delete.
 - Deleted comments are deleted immediately.
@@ -589,9 +589,9 @@ User stories covered:
 
 - Logged-in users are successfully able to follow users. The amount of follows will update accordingly in detailed profile page.
 - The amount of followers will update accordingly when a user is being followed by another user.
-- In Popular Yakfiles and detailed profile page of other users, a "Follow" button will show up if the user is not following them already. An 'Unfollow' button will show up if the user is already following them. When clicking these buttons, number of follows/followers will update.
+- In Popular Profiles and detailed profile page of other users, a "Follow" button will show up if the user is not following them already. An 'Unfollow' button will show up if the user is already following them. When clicking these buttons, number of follows/followers will update.
 - Posts posted by followed users will show up in the "Feed" page.
-- Popular Yakfiles will update accordingly based on who has the highest amount of followers, with the highest at the top of the list.
+- Popular Profiles will update accordingly based on who has the highest amount of followers, with the highest at the top of the list.
 - Only logged-in users will view the option to follow or unfollow users.
 
 **Profile Tests**
@@ -604,10 +604,75 @@ User stories covered:
 - When changing passwords, users will be redirected to a page where they can change their password. Users can type in the password and confirm. If user types in unmatching passwords, a message will show saying that passwords do not match.
 - Logged-out users will not see any button to click in detailed post page where the Follow/Unfollow/edit icons are.
 - All posts by the user in their detailed profile page will show up. Infinite scroll successfully works where more than ten posts can show up at a time.
-- Post reyakks functionality works the same when viewing posts in the detailed profile page of the user.
+- Post like functionality works the same when viewing posts in the detailed profile page of the user.
 - Clicking on the title of the posts will still redirect user to the detailed post page of the post. 
 
 **Other Testing**
 
 - Any links within the domain that do not exist will redirect user to the 404 page.
 - Any errors in the back end or server will redirect user to the 500 page. This was tested during the back end logout bug. 
+
+### Bugs 
+
+Many bugs have occurred during the development of the front end project. Most notable bugs are listed below:
+
+
+
+
+## Deployment
+
+This application has been deployed from GitHub to Heroku by following the steps (these are steps after you have set up the front end project in the Config Vars of the back end project):
+
+1. Create or log in to your account on [Heroku.com](https://www.heroku.com/).
+2. Create a new app, add app name and choose your region.
+3. Click on create app.
+4. In Terminal of your project, push your changes to GitHub.
+5. Log in to Heroku.com and open the dashboard for your react application (for the front end).
+6. Select the “Deploy” tab in the dashboard
+7. Scroll down to the bottom and then select “Manual deploy”, and choose your repository. 
+8. Wait for your build to complete.
+9. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
+
+- The following steps were taken for the cloning process: 
+
+1. Log in to **[GitHub](https://github.com/)**.
+2. Click on the profile icon to locate **'Your repositories'**. 
+3. On the repository page, click on the repository you wish to clone.
+4. Under **'Code'**, see the different cloning options, HTTPS, SSH, and GitHub CLI. Click the preferred cloning option, and then copy the link provided. 
+5. Open **Terminal**.
+6. In Terminal, change the current working directory to the desired location of the cloned directory.
+7. Type git clone, and then paste the URL copied from GitHub earlier. 
+8. Type **Enter** to create the local clone. 
+
+## Credits
+
+### Code
+
+- [Code Institute Moments Project](Solutions)
+    - Functionality of the project credit goes to Code Institute. Comments are made along the project of where code is used from Code Institute's Moments project. 
+
+- [Stack Overflow](https://stackoverflow.com/)
+    - Stack Overflow was referred to many times while trying to debug code. Inspiration on front-end features and functionality was also taken from Stack Overflow.
+
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+    - React documentation was referred to many times during the development of this project.
+
+- [React Bootstrap](https://react-bootstrap.github.io/)
+    - Components from React Bootstrap were used in the project (Navigation bar, forms, cards, etc).
+
+- [Ian Meigh](https://github.com/ianmeigh/property-direct-frontend/blob/main/USERSTORIES.md)
+    - Ian Meigh has been a huge help during my project. He has helped me debug countless number of bugs, helped me with some of the functionality of reyakking comments, and guided me through the logout bug. Ian Meigh's tutorial on ESlint was used for ESlint testing.
+
+- [Medium](https://medium.com/)
+    - Medium was referred to for information on how import multiple classes, how to use React Bootstrap syntax, etc. 
+
+- [React Router Documentation](https://v5.reactrouter.com/web/guides/quick-start)
+    - React Router documentation was referred to for the use of routes, useNavigate, and how to show the active links in navbar. 
+
+### Acknowledgements
+
+- Thank you to Tutor Support for always being there for me, and always being patient with my questions.
+
+- Thank you to CI Slack Channel for taking time out of their day to answer my questions.
+
+- A huge thank you to Ian Meigh again for helping me survive the Advanced Front-End module. This project couldn't have been completed without him.
