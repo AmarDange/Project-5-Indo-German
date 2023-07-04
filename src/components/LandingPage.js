@@ -8,7 +8,7 @@ import styles from "../styles/LandingPage.module.css";
  * Landing page with information about the App
  * Prompts user to sign up/sign in
  * Gives instructions on how to he started
-*/
+**/
 const LandingPage = () => {
     return (
         <>
@@ -36,7 +36,7 @@ const LandingPage = () => {
                             <br />
                             <h6>Our easy to use features allow you to access all the posts (Homepage),
                                 follow the post and see their posts in your feed, and save liked posts in liked page.</h6>
-                                <p>You can share a post and also recommend people </p>
+                            <p>You can share a post and also recommend people </p>
                             <p><strong>Feeling excited to know / Share about India & Germany? Come join our community!!</strong></p>
                             <Link to="/signup">
                                 <Button

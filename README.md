@@ -7,7 +7,7 @@ The main motive is to provide information about eduation, Places to visist, food
 
 ![Screenshot of Am I Responsive](docs/features/amiresponsive.JPG)
 
- ## Deployed Link
+## Deployed Link
 
 - [Front-End Deployed Link](https://indo-german-pp5-e488026ec98b.herokuapp.com/)
 
@@ -24,9 +24,11 @@ The main motive is to provide information about eduation, Places to visist, food
   * [Deployed Link](#deployed-link)
   * [Back End Links](#back-end-links)
   * [User Experience (UX)](#user-experience--ux-)
-    + [User Stories](#user-stories)
     + [Site Goals](#site-goals)
+    + [Scope](#scope)
+    + [Agile Development](#agile-development)
     + [Kanban Board and MosCow Prioritization](#kanban-board-and-moscow-prioritization)
+    + [Epics and User Stories](<#epics-and-user-stories>)
     + [Design](#design)
     + [Wireframes](#wireframes)
   * [Features](#features)
@@ -47,91 +49,56 @@ The main motive is to provide information about eduation, Places to visist, food
 
 ## User Experience (UX)
 
-### User Stories
-
-- Users: 
-
-    - Authentication
-
-    1. As a **user** I can **easily log in** so that **I can quickly post, add more comments, or delete content if I wish.**
-
-    2. As a **user** I can **easily log out** so that **I can have more security on my account.**
-
-    3. As a **user** I can **sign up easily with just a username and password** so that **I have the ability to create posts or comments without having to share my email address.**
-
-    4. As a **user** I **cannot edit/delete posts/comments/likes that are not mine** so that **I can be assured that my posts/comments/likes are protected and can only be changed by me.**
-
-    5. As a **user** I can **only like/unlike other users' posts and comments** so that **I can only show my appreciation for other posts/comments and not cheat the system by liking my own posts/comments.**
-
-    6. As a **user** I can **only follow other users** so that **I cannot cheat the system and follow myself and gain myself a new, false follower.**
-
-    7. As a **user** I can **see whether I am logged in or not** so that **I will know if I will need to log in if I am not.**
-
-    8. As a **user** I can **maintain my logged-in status** so that **I will not need to constantly log in when not on the website for a few hours, and can log out manually whenever I want to log out.**
-
-    - Posts
-
-    1. As a **user** I can **create new posts** so that **I can share images, my thoughts, or what I'm doing.**
-
-    2. As a **user** I can **edit posts** so that **I can change my posts, images, etc whenever I change my mind about what I posted or wish to remove/add details.**
-
-    3. As a **user** I can **delete my posts** so that **I can get rid of my posts that I no longer want to be shared.**
-
-    4. As a **user** I can **view the details of a post** so that **I can read more information about the post such as when it was created, who created it, if it was edited, read the comments, etc.**
-
-    5. As a **user** I can **like posts** so that **I can share my appreciation for the post and show the world and the author that their post is great.**
-
-    6. As a **user** I can **remove likes on a post** so that **I can change my mind about whether I like the post or not.**
-
-    - Comments
-
-    1. As a **user** I can **post a comment on a post** so that **I can contribute discussion to a post or share my thoughts about a post.**
-
-    2. As a **user** I can **delete my comments on a post** so that **I can remove comments if I no longer want my comments to be public.**
-
-    3. As a **user** I can **read comments on a post** so that **I can read what others think about the post and read the discussion happening.**
-
-    4. As a **user** I can **edit my comments** so that **have the possibility to remove or add more details to my existing comments.**
-
-    5. As a **user** I can **like comments** so that **I can share my appreciation for the comment.**
-
-    6. As a **user** I can **unlike comments** so that **I can change my mind about my positive feelings towards a comment.**
-
-
-    - Navigation
-
-    1. As a **user** I can **a nice 500 page consistent with the site layout** so that **I can be communicated with if there are issues with the website's server or backend.**
-
-    2. As a **user** I can **have the navigation bar customed to my logged-in or out status** so that **I can have the options to log in or sign up when logged out, or have the options to create a post, view my profile, sign out, etc when logged in.**
-
-    3. As a **user** I can **a nice 404 page consistent with the site layout** so that **I can be communicated with if I have reached an invalid web page.**
-
-    4. As a **user** I can **navigate through pages quickly** so that **I can view content smoothly without the pages being refreshed**
-
-    5. As a **user** I can **see the navigation bar at the top of every page** so that **I can easily navigate between pages.**
-
-    6. As a **user** I can **infinitely scroll down to see more posts and also to see more comments** so that **I can consistently look at more posts/comments without having to click any extra links to view more.**
-
-    - Profile
-
-    1. As a **user** I can **view user avatars** so that **easily identify users of the website.**
-
-    2. As a **user** I can **view a detailed page of users** so that **I can see their posts and learn more about the user. I can also see their following count, followers count, etc.**
-
-    3. As a **user** I can **follow or unfollow other users** so that **I can see or choose to remove posts by specific users in my posts feed.**
-
-    4. As a **user** I can **see the most followed profiles** so that **I will be able to see who the most popular profiles are.**
-
-    - General
-
-    1. As a **user** I can **search for posts or users in a search box** so that **I can quickly find specific posts or users that I am wanting to look for.**
-
-    2. As a **user** I can **easily find the 'About' link in the nav bar** so that **I can learn about the purpose of this website which will be crucial as a new user coming to the website.**
-
-
 ### Site Goals
 
 - The goal of the website is to serve as a social media platform for all ages of different users. Users should be able to create an account without an email address to not compromise their personal data. Users are able to create accounts, log in, post whatever they wish with a title, content, and image, make comments on other users' posts, and like other users' posts and comments. Users also have the freedom to personalize their profile by adding their own profile display photo and changing their 'about me' section. Users have the freedom to edit and delete their posts and comments. A site like this is needed because, today, security is a huge issue. Making a social media account with Twitter, Facebook, Reddit typically asks for your email address and you would have to give away personal information. With Indo German, there are no ties to you and your personal life. You create an account, post anonymously and of your free will, and continue living your secure life. 
+
+### Scope
+
+- An attractive and intuitive UX experience: 
+	1. Website title that gives an idea what is it about
+	2. Hero-image with information on the site's purpose
+	3. Responsive design across all devices
+	4. A clear and straightforward layout
+	5. Footer with links to social media
+	6. Implement alert messages to provide users with more feedback after they take certain actions
+	7. Fast application that is easy to use
+	8. Show user's profile image in the profile section
+
+- An easy navigation for the user through all the pages and features
+	1. Navigation Menu with easy access to all links.
+	2. Easy Sign Up/ Sign In/ Sign Out functionality visible.
+	3. Posts list with infinite scroll feature
+	4. Landing page with guidance to sign up/sign in and how to start using the websites features
+	6. Search field to enable user to search a keyword
+	7. Category filter for easy sorting of posts
+	8. User's Feed page with posts from their favourite users
+	9. Liked page to enable users to save the posts they liked
+
+- Posts and Comment Features
+	1. Latest entries feature on top or first
+	2. Click on post to view post details 
+	3. Ability to comment and like a posts
+    4. Ability to like a comment
+	5. Create, Edit and Delete own post and comment.
+
+- Profiles Features
+	1. Shows username and Avatar, enlists posts made by the user
+	2. Shows information on Followers and other users following
+	3. Password change option
+	4. Profile edit option
+
+
+### Agile Development
+
+An Agile approach was used to manage the completion of this project. Specifically, this meant breaking the project down into smaller tasks with a focus on minimum functionality first. Only when a minimally viable product is ready will extra features be added. In addition, GitHub projects and Issues were used a tool to keep track of the tasks.
+
+What does minimally functioning mean in this context? As with any project, there are real constraints (time, energy, know-how) that force a developer to prioritize the work. Based on my abilities and constraints, I have prioritized the project requirements in the following way:
+
+A functioning front-end with authentication, registration, CRUD operations for a Post and Comment. The focus is on working code.
+Implementation of code for adding likes and comments to a Post.
+Aesthetics/Design - This is of course important in an advanced front end project, but the goal here is to have just minimal styling at first and then as time permits improve the visual design.
+
 
 ### Kanban Board and MosCow Prioritization
 
@@ -141,6 +108,144 @@ I used a kanban board to help organize the user stories and tasks required for t
 <summary>Screenshot of Kanban Board Part 1</summary>
 <img src='documentation/kanban-1.png' alt='kanban board part 1'>
 </details>
+
+
+## Epics and User Stories
+8 Epics were created which were further developed into 34 User Stories.Many of the user stories are worded similarly to the Moments walkthrough project because the functionality is quite similar - especially with navigation and authentication, posts, likes and comments.
+
+### 1. Website UI
+
+**Epic Goals for End User**
+
+1. A landing page that describes the purpose of the website
+2. User guidance to get started 
+3. Easy register/sign up and sign in options
+
+**Related User Stories**
+
+- As a **site user** I can **capability** so that **I can easily understand the purpose and main features of the website**
+- As a **site user** I can **see well written instructions on how to get started** so that **I can easily get information about how to start use the web application**
+- As a **site user** I can **see sign up and sign in to the site** so that **I can easily register or sing in to access the functionality of website.**
+
+
+### 2. Authentication
+
+**Epic Goals for End User**
+
+1. Access to Sign Up and Sign In Features
+2. Access to Sign Out option
+3. Refressing access tokens
+4. Access to Changing Posts/Comments/Liking
+5. Not Liking Own Posts/Comments
+6. Not following self
+
+**Related User Stories**
+
+- As a **site user** I can **sign up and sign in to the site** so that **I can access the functionality of website.**
+- As a **site user** I can **easily log out** so that **I can have more security on my account.**
+- As a **site user** I can **maintain my logged-in status until I choose to log out** so that **my user experience is not compromised**
+- As a **site user** I cannot **edit/delete any posts/comments/likes that are not mine** so that **I can be assured that my posts/comments/likes are protected and can only be changed by me.**
+- As a **site user** I can **only like/unlike other users' posts and comments** so that **I can only show my appreciation for other posts/comments and not cheat the system by liking my own posts/comments**
+- As a **user** I can **only follow other users** so that **I cannot cheat the system and follow myself and gain myself a new, false follower.**
+
+### 3. Navigation
+
+**Epic Goals for End User**
+
+1. An easy to use navigation 
+2. Home page with posts list with infinite scroll visible to all
+3. Navigation routing
+4. Navigation conditional rendering
+5. 404 page
+
+**Related User Stories**
+
+- As a **site user** I can **see a navigation bar on every page** so that **I can easily return to pages I wish to visit.**
+- As a **site user** I can **infinitely scroll down to see more posts and also to see more comments** so that **I can consistently look at more posts/comments without having to click any extra links to view more.**
+- As a **site user** I can **navigate through pages quickly** so that **I can view content smoothly without the pages being refreshed**
+- As a **site user** I can **have the navigation bar customed to my logged-in or out status** so that **I can have the options to log in or sign up when logged out, or have the options to create a post, view my profile, sign out, etc when logged in.**
+- As a **site user** I can **a nice 404 page consistent with the site layout** so that **I can be communicated with if I have reached an invalid web page.** 
+
+### 4. General
+
+**Epic Goals for End User**
+
+1. Search bar
+2. Confirmation messages
+3. About page
+4. Category filter
+
+**Related User Stories**
+
+- As a **site user** I can **search for posts or users in a search box** so that **I can quickly find specific posts or users that I am wanting to look for.**
+- As a **site user** I can **always be notified when my interactions on the website are successful (creating posts/comments, liking/unliking posts, unfollowing/following users, logging in/out, etc** so that **I will always be informed of my actions and whether they are successful or not.**
+- As a **site user** I can **easily find the 'About' link** so that **I can learn about the purpose of this website which will be crucial as a new user coming to the website**
+- As a **site user** I can **view post category options** so that **I choose posts to display that I’m particularly interested in.**
+
+### 5. Post Management
+
+**Epic Goals for End User**
+
+1. Post visibility
+2. Post Details visibility
+3. Post Creation Option
+4. Post update Option
+5. User's Feed page
+
+**Related User Stories**
+ - As a **site user** I can **view all the posts on the Homepage** so that **I can view, like and comment those post**
+ - As a **site user** I can **view and read the detailed post page of all of the site users** so that **I can view the comments made by different users**
+ - As a **site user** I can **create posts** so that **I can share my memories with others**
+ - As a **site user** I can **edit/delete my posts** so that **I can make changes to existing post information or remove my content**
+ - As a **site user** I can **view all the posts on the User's Feed page** so that **I can see all the posts posted by the people whom I follow**
+
+ ### 6. Comment Management
+
+**Epic Goals for End User**
+
+1. Comments visibility
+2. Comments Creation Option
+3. Comments update Option
+4. Comments Delete Option
+
+**Related User Stories**
+
+- As a **site user** I can **read comments on a post** so that **I can read what others think about the post and read the discussion happening.**
+- As a **site user** I can **post a comment on a post** so that **I can contribute discussion to a post or share my thoughts about a post**
+- As a **site user** I can **edit/delete my comments** so that **I have the possibility to remove or add more details to my existing comments.**
+
+### 7. Likes Management
+
+**Epic Goals for End User**
+
+1. Like visibility
+2. Like/Unlike a post
+3. Like/Unlike a comment
+
+**Related User Stories**
+
+- As a **site user** I can **see the post that have received most number of likes** so that **I can assess which are the best ones.**
+- As a **site user** I can **like a post** so that **I can share my appreciation for the post and show the author that their post is great.**
+- As a **site user** I can **remove likes on a post** so that **I can show that my opinion has changed**
+- As a **site user** I can **like/unlike comments** so that **I can share my feelings towards a comment.**
+
+### 8. Profile Management
+
+**Epic Goals for End User**
+
+1. Profile visibility
+2. Profile following/ unfollowing user
+3. Profile update option
+4. Profile popularity assessment
+
+
+**Related User Stories**
+
+- As a **site user** I can **view a detailed page of users** so that **I can see their posts and learn more about the user. I can also see their following count, followers count, etc.**
+- As a **site user** I can **follow or unfollow other users** so that **I can see or choose to remove posts by specific users in my posts feed**
+- As a **site user** I can **see the most popular profiles** so that **I can see who has the most interesting posts**
+- As a **site user** I can **update my own data** so that **I can make changes as needed**
+
 
 
 ### Design
