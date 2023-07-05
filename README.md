@@ -626,28 +626,12 @@ It is used to enable infinite scrolling on the Posts and Recommendations compone
 
 Many bugs have occurred during the development of the front end project. Most notable bugs are listed below:
 
-(1) Issue: When click on like icon in comment box, it showed NaN written instead of number of likes and when refreshed like icon changed into unlike.<br>
-  - Fix: Add get_comment_likes_id function in comment model and replace queryset=comment.object.all with annotate method in view.py file. Also add related_name='comment_likes' in comment field in comment_likes model.
+(1) Issue: When user was creating profile at that default image was not taking from Backend project, it showed without Image.<br>
+  - Fix: Add image in cloudinary once again and provided path in Profile model.py. Again deployed project. But previously created profiles was not corrected.
 
-(2) Issue: Collapse NavBar didn't display background color when expend it in small devices.<br>
-  - Fix: Style the NavBarCollapse class with background-color:#fa9455 !important.
+(2) Issue: When user sign in the app. It was not showing Home page after sign in. It was showing blank page and after refresh URL Home Page was coming automatiocally<br>
+  - Fix: Added CSRF_TRUSTED_ORIGINS to your settings.py file and updated CLIENT_ORIGIN and CLIENT_ORIGIN_DEV in Heroku.
 
-(3) Issue: Home nav link is always active even if we are active on another nav link.<br>
-  - Fix: Replace the exact path="/" to "/home" in Route in app.js 
-
-(4) Issue: DeleteModal was not disappear while clicking on delete icon from dropdown menu.<br>
-  - Fix: delete const handle =() => setShowModel(false) from deleteModal.js because it already define in parent component.
-
-(5) Issue: After installing 'eslint' I came accross the error for InfiniteScroll in PostDetailPage, ProfilePage and PostListPage.
-<details>
-<summary>Children props error in Infinite scroll</summary>
-<img src='documentation/children-props-error.png' alt='children props error'>
-</details>
-  - Fix: Remove the children element from infinite scroll and place the code between the tags. 
-<details>
-<summary>Solution of children props error in Infinite scroll</summary>
-<img src='documentation/solution-children-props-error.png' alt='solution of children props'>
-</details>
 
 ## Testing
 
@@ -656,23 +640,24 @@ Many bugs have occurred during the development of the front end project. Most no
 #### Google's Lighthouse Performance
 
 ##### Desktop Results:
-![Lighthouse Desktop Result](assets/testing/desktopperformance.PNG).
+![Lighthouse Desktop Result](docs/features/dekstoplighthouse.JPG).
 
 ##### Mobile Results:
-![Lighthouse Mobile Result](assets/testing/mobileperformance.PNG).
+![Lighthouse Mobile Result](docs/features/mobilelighthouse.JPG).
 
 ### Validation
 I used the following validation tools to validate HTML, CSS 
 
 - HTML using [W3C HTML validator](https://validator.w3.org/) was used to validate the HTML of the website.
-All the Django templates html files hava been manually copying the source of the rendered pages and then validating using the W3C Validator. I found some erros and warning messages but These do not seem to affect the functionality of the website.
+All the Django templates html files hava been manually copying the source of the rendered pages and then validating using the W3C Validator. I found one erros and warning messages but These do not seem to affect the functionality of the website.
+Also I have discussed with tutor Jason but He is also suggested to keep as it is.
 
-  - result for [base.html](assets/testing/base.PNG)
+![HTML Result](docs/features/HTMLvalidator.JPG).
  
 
-- CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used for validating the CSS stylesheet. CSS file was tested by manually copying the CSS codes into the manual input option.
+- CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used for validating the CSS stylesheet. All CSS file was tested by manually copying the CSS codes into the manual input option.
 
-  - The result can be seen [here](assets/testing/cssvalidator.PNG).
+ ![CSS Result](docs/features/cssvalidator.JPG).
 
 
 ### User Story Testing
