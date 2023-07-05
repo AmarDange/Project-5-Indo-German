@@ -18,40 +18,66 @@ The main motive is to provide information about eduation, Places to visist, food
 
 
 
-## Table of Contents
+## [Table of Contents](#table-of-contents)
 
-- [Indo German - Front-End](#indo-german---front-end)
-  * [Deployed Link](#deployed-link)
-  * [Back End Links](#back-end-links)
-  * [User Experience (UX)](#user-experience--ux-)
-    + [Site Goals](#site-goals)
-    + [Scope](#scope)
-    + [Agile Development](#agile-development)
-    + [Kanban Board and MosCow Prioritization](#kanban-board-and-moscow-prioritization)
-    + [Epics and User Stories](<#epics-and-user-stories>)
-    + [Design](#design)
-    + [Wireframes](#wireframes)
-  * [Features](#features)
-    + [Existing Features](#existing-features)
-    + [Future Features](#future-features)
-  * [Technologies Used](#technologies-used)
-    + [Languages and Packages/Libraries Used](#languages-and-packages-libraries-used)
-    + [Programs Used](#programs-used)
-  * [Testing](#testing)
-    + [Validation Testing](#validation-testing)
-    + [Manual Testing](#manual-testing)
-    + [Bugs](#bugs)
-  * [Deployment](#deployment)
-  * [Credits](#credits)
-    + [Code](#code)
-    + [Acknowledgements](#acknowledgements)
+- [User Experience (UX)](#user-experience-ux)
+	- [Site Goals](#site-goals)
+	- [User Personas](#user-personas)
+	- [Scope](#scope)
+		- [Epics and User Stories](<#epics-and-user-stories>)
+	    	- [Website UI](#website-ui)
+        		- [Authentication](#authentication)
+        		- [Navigation](#navigation)
+		- [General](#general)
+		- [Post Management](#post-management)
+        	- [Comment Management](#comment-management)
+        	- [Likes Management](#likes-management)
+        	- [Profile Management](#profile-management)
+    	- [Agile Development](#agile-development)
+        	- [Kanban Board and MosCow Prioritization](#kanban-board-and-moscow-prioritization)
+        	- [Outline of Sprints](<#outline-of-sprints>)
+    	- [Acceptance Criteria](<#acceptance-criteria>)
+	- [Tasks](<#tasks>)
+	- [User Story Management](<#user-story-management>)
+        - [Sprints](#sprints)
+- [Design](<#design>)
+	- [Colours](<#colours>)
+	- [Typography](<#typography>)
+	- [Imagery](<#imagery>)
+	- [Wireframes](<#wireframes>)
+- [Features](<#features>)
+- [Components](<#components>)
+- [Technologies Used](#technologies-used)
+    - [Languages and Packages/Libraries Used](#languages-and-packages-libraries-used)
+    - [Programs Used](#programs-used)
+- [Production](#production)
+- [Issues and Fixes](<#issues-and-fixes>)
+- [Testing](<#testing>)
+	- [User Story Testing](<#user-story-testing>)
+	- [Testing Technologies](<#testing-technologies>)
+	- [Manual Testing](<#manual-testing>)
+	- [Validation](<#validation>)
+	- [Browser Compatibility](<#browser-compatibility>)
+- [Deployment](<#deployment>)
+	- [Heroku](<#heroku>)
+- [Credits and Resources](<#credits-and-resources>)
+	- [Code](<#code>)
+	- [Learning Resources](<#learning-resources>)
+	- [Content](<#content>)
+	- [Media](<#media>)
+- [Acknowledgements](<#acknowledgements>)
 
 
 ## User Experience (UX)
 
 ### Site Goals
 
-- The goal of the website is to serve as a social media platform for all ages of different users. Users should be able to create an account without an email address to not compromise their personal data. Users are able to create accounts, log in, post whatever they wish with a title, content, and image, make comments on other users' posts, and like other users' posts and comments. Users also have the freedom to personalize their profile by adding their own profile display photo and changing their 'about me' section. Users have the freedom to edit and delete their posts and comments. A site like this is needed because, today, security is a huge issue. Making a social media account with Twitter, Facebook, Reddit typically asks for your email address and you would have to give away personal information. With Indo German, there are no ties to you and your personal life. You create an account, post anonymously and of your free will, and continue living your secure life. 
+- "Indo German" is a social media App mainly meant for everyone who is looking to socialize and share their experince while living in abroad and share thoughts with others.
+- The goal of the website is to serve as a social media platform for all ages of different users. Users should be able to create an account without an email address to not compromise their personal data. Users are able to create accounts, log in, post whatever they wish with a title, content, and image, make comments on other users' posts, and like other users' posts and comments. Users also have the freedom to personalize their profile by adding their own profile display photo and changing their 'Bio' section. Users have the freedom to edit and delete their posts and comments. A site like this is needed because, today, security is a huge issue. Making a social media account with Twitter, Facebook, Reddit typically asks for your email address and you would have to give away personal information. With Indo German, there are no ties to you and your personal life. You create an account, post anonymously and of your free will, and continue living your secure life.
+
+### User Personas
+As mentioned in Site Goals, the users expected to be visiting this website regularly are going anyone seeking information or any experince while living in Germany or India. User can search information on this app, if they want to plan come to germany or India. I created 4 fictional characters which represents the target users. The user personas with their needs, goals and frustrations are enlisted, which helped me design this website with a point of view of distinct users.
+The link to User Personas can be found [here](docs/agile/user_personas.pdf).
 
 ### Scope
 
@@ -71,7 +97,7 @@ The main motive is to provide information about eduation, Places to visist, food
 	3. Posts list with infinite scroll feature
 	4. Landing page with guidance to sign up/sign in and how to start using the websites features
 	6. Search field to enable user to search a keyword
-	7. Category filter for easy sorting of posts
+	7. Left panel to see liked posts
 	8. User's Feed page with posts from their favourite users
 	9. Liked page to enable users to save the posts they liked
 
@@ -88,26 +114,7 @@ The main motive is to provide information about eduation, Places to visist, food
 	3. Password change option
 	4. Profile edit option
 
-
-### Agile Development
-
-An Agile approach was used to manage the completion of this project. Specifically, this meant breaking the project down into smaller tasks with a focus on minimum functionality first. Only when a minimally viable product is ready will extra features be added. In addition, GitHub projects and Issues were used a tool to keep track of the tasks.
-
-What does minimally functioning mean in this context? As with any project, there are real constraints (time, energy, know-how) that force a developer to prioritize the work. Based on my abilities and constraints, I have prioritized the project requirements in the following way:
-
-A functioning front-end with authentication, registration, CRUD operations for a Post and Comment. The focus is on working code.
-Implementation of code for adding likes and comments to a Post.
-Aesthetics/Design - This is of course important in an advanced front end project, but the goal here is to have just minimal styling at first and then as time permits improve the visual design.
-
-
-### Kanban Board and MosCow Prioritization
-
-I used a kanban board to help organize the user stories and tasks required for this project. When each task was in progress, they would be dragged to the 'in progress' column. When they were completed, they were dragged to the 'done' column. I also utilized MoSCoW prioritization by labelling each task as either Must Have or Should Have. I prioritized finishing the Must Have tasks first and then worked on the Should Have tasks. I managed to complete all of the tasks in the end and all user stories are successfully covered.
-
-<details>
-<summary>Screenshot of Kanban Board Part 1</summary>
-<img src='documentation/kanban-1.png' alt='kanban board part 1'>
-</details>
+[Back to top ⇧](#table-of-contents)
 
 
 ## Epics and User Stories
@@ -117,7 +124,7 @@ I used a kanban board to help organize the user stories and tasks required for t
 
 **Epic Goals for End User**
 
-1. A landing page that describes the purpose of the website
+1. A landing page that describes about website
 2. User guidance to get started 
 3. Easy register/sign up and sign in options
 
@@ -173,14 +180,14 @@ I used a kanban board to help organize the user stories and tasks required for t
 1. Search bar
 2. Confirmation messages
 3. About page
-4. Category filter
+4. Left panel
 
 **Related User Stories**
 
 - As a **site user** I can **search for posts or users in a search box** so that **I can quickly find specific posts or users that I am wanting to look for.**
 - As a **site user** I can **always be notified when my interactions on the website are successful (creating posts/comments, liking/unliking posts, unfollowing/following users, logging in/out, etc** so that **I will always be informed of my actions and whether they are successful or not.**
 - As a **site user** I can **easily find the 'About' link** so that **I can learn about the purpose of this website which will be crucial as a new user coming to the website**
-- As a **site user** I can **view post category options** so that **I choose posts to display that I’m particularly interested in.**
+- As a **site user** I can **view Left Panel options** so that **I choose posts to display that I’m particularly interested in.**
 
 ### 5. Post Management
 
@@ -246,30 +253,123 @@ I used a kanban board to help organize the user stories and tasks required for t
 - As a **site user** I can **see the most popular profiles** so that **I can see who has the most interesting posts**
 - As a **site user** I can **update my own data** so that **I can make changes as needed**
 
+[Back to top ⇧](#table-of-contents)
+
+## Agile Development
+
+An Agile approach was used to manage the completion of this project. Specifically, this meant breaking the project down into smaller tasks with a focus on minimum functionality first. Only when a minimally viable product is ready will extra features be added. In addition, GitHub projects and Issues were used a tool to keep track of the tasks.
+
+What does minimally functioning mean in this context? As with any project, there are real constraints (time, energy, know-how) that force a developer to prioritize the work. Based on my abilities and constraints, I have prioritized the project requirements in the following way:
+
+A functioning front-end with authentication, registration, CRUD operations for a Post and Comment. The focus is on working code.
+Implementation of code for adding likes and comments to a Post.
+Aesthetics/Design - This is of course important in an advanced front end project, but the goal here is to have just minimal styling at first and then as time permits improve the visual design.
 
 
-### Design
+### Kanban Board and MosCow Prioritization
 
-- Colour Scheme:
+I used a kanban board to help organize the user stories and tasks required for this project. When each task was in progress, they would be dragged to the 'in progress' column. When they were completed, they were dragged to the 'done' column. I also utilized MoSCoW prioritization by labelling each task as either Must Have or Should Have. I prioritized finishing the Must Have tasks first and then worked on the Should Have tasks. I managed to complete all of the tasks in the end and all user stories are successfully covered.
 
-    - Typography: The fonts are taken from [Google Fonts](https://fonts.google.com/about).
+<details>
+<summary>Screenshot of Kanban Board Part 1</summary>
+<img src='documentation/kanban-1.png' alt='kanban board part 1'>
+</details>
 
-    - Colours: 
-		- The colour scheme has considered based on easy accessibility for all. 
-		- Complimentarity was key feature in color selection, to give it a pleasant feel for all age groups.
-		- The colors have been rendered differently for posts, so that user can easily distinguish between them.
+### Outline of Sprints
+The following is an outline of the sprints that were done during the completion of this project.
 
+#### Sprint 1 - Project Setup
+Goal: Project environment, authentication functionality.Minimum styling Time: Three Day
+
+  - Setup project
+  - Install additional libraries
+  - Write User Stories
+  - Setup minimal navbar with routing
+  - Design minimal sign in and sign up forms
+  - Connect sign in and sign up to backend
+  - Fix hamburger toggle
+  - Access and refresh tokens
+
+#### Sprint 2 - Making a Post
+Goal: Users can see posts on home page and add a post. Minimal styling Time: Three Days
+
+  - Design content page
+  - Connect to backed to display current posts
+  - Design Post form
+  - Create a Post
+  - Display a Post
+  - Like a Post
+  - Add links to navbar
+
+#### Sprint 3 - Likes, Comments and Profile page
+Goal: Users can add a comment and like a post and comment. Users can see the posts they've liked. Time: Seven Days
+
+  - Add feed and liked link to navbar for logged in user
+  - Add filter by like
+  - Add edit and delete function for Post.
+  - Design add comment form
+  - Add, delete, update, and display comments.
+  - Add like functionality on comment
+  - Create Profile page header which include profile Image, name, follow button
+  - Create basic popular profiles component
+  - Create follow, unfollow functionality for profiles
+  - Update profile page
+
+#### Sprint 4 - General feature, styling and deployment 
+Goal: Adjust layout and basic styles for components
+
+  - Intuitive landing page
+  - About page
+  - Add left panel
+  - Add footer
+  - Configure layouts
+
+[Back to top ⇧](#table-of-contents)
+
+### Tasks
+The tasks for the website development process was closely followed as mentioned in CI's Advanced Frontend React module "I Moments" walkthrough project. The task is generally the developers step towards preparing the app.
+The tasks that I have followed during the development phase were carried out in this order.
+
+**Before Project Inception**
+
+- Design Entity Relationship Diagram 
+- Set up and create  Back End API. For this backend was built using the Django Rest API framework. All information can be found in [Indo German Back End](https://github.com/AmarDange/Indo-German)
+- Create Project, Epics, User Stories and prepare Kanban Board
+
+**Creation of Project in Codeanywhere**
+- Set up ReactJS project
+- Install dependencies
+- Coding
+- Testing
+- Create Frontend Repository in GitHub
+
+**Future Tasks**
+There are so many feaures I wish to build upon. But due to severe time constraints, the App is in it's basic form. Few features, I would've liked to have are:
+- Add category (by India, Food, Germany, Culture) in left panel. So that user can identify soultion quickly.
+- Add chat window, if someone wants to have personal chat of there topic then user can do it in chat window.
+- Functionality to crop image while uploading image in profile.
+- Uploading video.
+
+## Design
+
+### Colours
+	- The colour scheme has considered based on easy accessibility for all. 
+	- Complimentarity was key feature in color selection, to give it a pleasant feel for all age groups.
+	- The colors have been rendered differently for posts, so that user can easily distinguish between the
+
+
+### Typography
+The fonts are taken from [Google Fonts](https://fonts.google.com/about).
+
+### Imagery
+The imagery on the website has been seleced according to the post requirement. Many images were taken from Google Images.
 
 ### Wireframes
 
-- Wireframes have been created using the program Whimsical
-
-Website Feed:
-
-<details>
-<summary>Screenshot of Desktop Wireframe: Website Feed</summary>
-<img src='documentation/wireframes/wireframe-feed-desktop.png' alt='desktop wireframe'>
-</details>
+The wireframes were generated using Balsamiq. The wireframes can be found in these links:<br>
+[Wireframes for Desktop](documentation/wireframes/Desktop-wireframes.pdf)<br>
+[Wireframes for Tablet](documentation/wireframes/Tablet-Wireframes.pdf)<br>
+[Wireframes for Mobile](documentation/wireframes/Mobile-wireframes.pdf)
 
 
 ## Features
@@ -287,270 +387,174 @@ Website Feed:
 - Landing page main body includes description about the app and User guidance
 - Contains user guidance to Sign in Sign Up links
 As shown here:
-![Landing Page](docs/features_testing/landing_page.gif)
+
+![Landing Page](docs/features/landingpage.JPG)
+
+**Home Page**
+
+- At the very first glimpse after sign in, user can see a Home Page with Navigation menu with a search button and posts, left and right panel on the homepage. 
+- Homepage provides the user with some quick information about the site and make use of all its features. 
+- User do not need to be registered to view a blog post. The responsive navigation bar is featured on all pages.
+
+![Home Page](docs/features/homepage.JPG)
 
 **Navigation Bar**
 
-![Screenshot of Navigation Bar Logged Out](documentation/navbar-2.png)
+- The navigation bar is created with React Bootstrap. Conditional rendering is used to display different links depending on if the user is logged-in or not. Depending on the logged in status, different links will appear. 
+- When the user is logged out, the user will see the option to log in, signup, and to read the 'About' of the website. 
+- When the user logs in, the user is able to see their username at the top of the screen (when clicking on it, user will be directed to their detailed page where they can edit their details), the option to go to 'Feed' (see all posts by their followed users) and log out. 
+- The navigation bar is fixed at the top so it will always remain readily available when users scroll down the website. 
+- The pages are wired using React Router Dom so the navigation process is extremely quick. 
+- The active link will be blue in contrast to the other links so the user knows exactly which page they are on. 
+- The navigation bar is fully responsive as it collapses into a hamburger icon on smaller screens. 
+- Users can easily log out of the website by clicking the 'Log Out' link that appears when users are signed in. T
 
-![Screenshot of Navigation Bar Logged In](documentation/navbar-1.png)
-
-![Screenshot of Navigation Bar Mobile Screens](documentation/navbar-responsive.png)
-
-The navigation bar is created with React Bootstrap. Conditional rendering is used to display different links depending on if the user is logged-in or not. Depending on the logged in status, different links will appear. When the user is logged out, the user will see the option to log in, signup, and to read the 'About' of the website. When the user logs in, the user is able to see their username at the top of the screen (when clicking on it, user will be directed to their detailed page where they can edit their details), the option to go to 'Feed' (see all posts by their followed users), create a post, go to see posts they have liked, and log out. The navigation bar is fixed at the top so it will always remain readily available when users scroll down the website. The pages are wired using React Router Dom so the navigation process is extremely quick. The active link will be black in contrast to the other links so the user knows exactly which page they are on. The navigation bar is fully responsive as it collapses into a hamburger icon on smaller screens. Users can easily log out of the website by clicking the 'Log Out' link that appears when users are signed in. The navbar was broken down into different components as each link is it's own React file. 
-
-User stories covered: 
-
-1. As a **user** I can **see whether I am logged in or not** so that **I will know if I will need to log in if I am not.**
-
-2. As a **user** I can **have the navigation bar customed to my logged-in or out status** so that **I can have the options to log in or sign up when logged out, or have the options to create a post, view my profile, sign out, etc when logged in.**
-
-3. As a **user** I can **navigate through pages quickly** so that **I can view content smoothly without the pages being refreshed**
-
-4. As a **user** I can **see the navigation bar at the top of every page** so that **I can easily navigate between pages.**
-
-5. As a **user** I can **easily find the 'About' link in the nav bar** so that **I can learn about the purpose of this website which will be crucial as a new user coming to the website.**
-
-6. As a **user** I can **easily log out** so that **I can have more security on my account.**
+![Navigation Bar on landing Page](docs/features/landingpagenavbar.JPG)
+![Navigation Bar on Home Page](docs/features/landingpage.JPG)
 
 
 **About Page**
 
-![Screenshot of About Page](documentation/aboutpage.png)
+- The 'About' page is created so new users will immediately be able to learn the purpose of Indo German and what Indo German is used for. 
+- The 'About' page also explains the use of App. For logged-in users, the 'About' page serves a useful purpose as it explains what the 'Feed' page is for, and what the 'Profile' page is for.
+- Users will be reminded of the functionality of the website such as the capability of being able to edit/delete posts and comments, not being able to like to their own posts/comments, the character limit of titles and content, etc. 
+- All of the information a new user or returning user would possibly need will be found on this page.
 
-The 'About' page is created so new users will immediately be able to learn the purpose of Indo German and what Indo German is used for. The 'About' page also explains the use ofApp. For logged-in users, the 'About' page serves a useful purpose as it explains what the 'Feed' page is for, and what the 'Profile' page is for. Users will be reminded of the functionality of the website such as the capability of being able to edit/delete posts and comments, not being able to like to their own posts/comments, the character limit of titles and content, etc. All of the information a new user or returning user would possibly need will be found on this page.
+![About Page](docs/features/aboutpage.JPG)
 
-User stories covered: 
 
-1. As a **user** I can **easily find the 'About' link in the nav bar** so that **I can learn about the purpose of this website which will be crucial as a new user coming to the website.**
+### Feed page
 
-**Sign in/Sign up Page**
+- Contains all posts of users that the logged in user follows
+- The posts are displayed in a single list, styled as cards for clean separation between posts.
+- Each post includes a title, description and image, along with Like and Comments icons showing number they received.
+- Clicking on heart icon adds a like to the post.
+- Clicking on comments icon takes user to the slected post's detail page which displays all the comments the post recieved.
+- Enabled with infinite scroll feature.
 
-![Screenshot of Login Page](documentation/login-page.png)
+![Feed Page](docs/features/feedpage.JPG)
 
-![Screenshot of Sign Up Page](documentation/signup-page.png)
+### Sign Up Link and Form
+- Allows users to create an account
+- Users must provide a valid username and enter their preferred password twice for confirmation
+As shown on link provided: 
 
-![Screenshot of Sign Up Page Validation](documentation/signuppage-validate.png)
+![Sign Up](docs/features/signup.JPG)
 
-The Sign-in page and sign-up page are two separate pages where users can log in with an existing account or sign up to create a new account. The authentication and account creation is handled in the back end using Django all-auth. Form validation is in place in the sign-up page where all fields are required. Form validation is also in place where the user must put in the same password twice when confirming the creation of their password. An email address is not required for signing up, which is a very important feature of Indo German as we want our users to feel protected. When users are logged in, their logged-in status will remain for twenty-four hours thanks to axios intereceptors. The users will not have to constantly log back in when being away from the website for a few hours, which greatly enhances user experience and will keep users more engaged. If a logged-in user tries to access the sign-up or log-in pages, they will be automatically redirected to homepage. 
+### Sign In Link and Form
+- Allows registered users to login to their account
+- Both the username and password have to be correct to be signed in
+- Displays errors if the username or password is wrong or the input is invalid
+As shown on link provided: 
 
-User stories covered: 
+![Sign In](docs/features/signin.JPG)
 
-1. As a **user** I can **easily log in** so that **I can quickly post, add more comments, or delete content if I wish.**
 
-2. As a **user** I can **sign up easily with just a username and password** so that **I have the ability to create posts or comments without having to share my email address.**
+### Post Section (Home)
 
-3. As a **user** I can **maintain my logged-in status** so that **I will not need to constantly log in when not on the website for a few hours, and can log out manually whenever I want to log out.**
+- The posts are displayed in a single list, styled as cards for clean separation between posts.
+- Enabled with infinite scroll feature.
+- Each post includes a title, description and image, along with Like and Comments icons showing number they received.
+- Clicking on heart icon adds a like to the post.
+- Clicking on comments icon takes user to the post detail page which displays all the comments the post recieved. 
 
-**404 Page**
+![Post Section](docs/features/postsectionhome.JPG)
 
-![Screenshot of 404 page](documentation/404-page.png)
+### Left panel
 
-If the user accesses a url that does not exist, the user will be automatically redirected to a 404 page with a gif of Kermit the Frog. The user will always reach this page when typing in an invalid url within the Indo German domain, thanks to React Router Dom's routes. Clicking on 'go back' will redirected user to the previous page they were on.
+- User can see liked posts by selecting a badge 
+- user can create new post.
+- User can open own profile to edit in new window
 
-User stories covered:
+![Left panel](docs/features/leftpanel.JPG)
 
-1. As a **user** I can **a nice 404 page consistent with the site layout** so that **I can be communicated with if I have reached an invalid web page.**
+### Liked page
 
-**500 Page**
+- Contains all posts of users that the logged in user likes 
+- The posts are displayed in a single list, styled as cards for clean separation between posts.
+- Each post includes a title, description and image, along with Like and Comments icons showing number they received.
+- Clicking on heart icon adds a like to the post.
+- Clicking on comments icon takes user to the slected post's detail page which displays all the comments the post recieved.
+- Enabled with infinite scroll feature.
 
-![Screenshot of 500 page](documentation/500-page.png)
+![Liked Page](docs/features/likedpage.JPG)
 
-Nothing is perfect, and nothing will run smoothly forever. That's why it is very important to create a 500 page for if there are ever problems with the server or back end. Users deserve to have a good, custom-made webpage to be redirected to if there's a problem with our end. That's why I have created a custom 500 page for if the server or back end ever has any issues, they will be redirected here. I have added navigation to this 500 page in the catch(err) portion of async functions throughout the project. Clicking on 'go back' will redirected user to the previous page they were on.
+### Search Feature
 
-User stories covered:
+- By typing a query in the search bar users can find a specific post they are looking for
+- Allows to search through all post title, word or author name
 
-1. As a **user** I can **a nice 500 page consistent with the site layout** so that **I can be communicated with if there are issues with the website's server or backend.**
+![Search Bar](docs/features/searchbar.JPG)
 
-**Homepage**
+### Popular Profiles
 
-![Screenshot of homepage](documentation/homepage.png)
+- Reusable component shows 10 most followed profiles in large devices in right column.
+- It shows first four most followed profiles in the app in medium to small devices.
+- The component displays user avatar, name and follow/unfollow button.
+- - Users are able to follow a specific profile they like and then be able to easily view their posts in the Feed.
 
-![Screenshot of homepage logged in](documentation/homepage-loggedin.png)
+![Popular Profiles](docs/features/popularprofile.JPG)
 
-![Screenshot of popular profiles smaller screens](documentation/populars-smallerscreen.png)
 
-On the homepage of the website, the list of posts will be visible. Users will be able to browse all posted posts (newest first) and be able to see how many Indo German or comments each post has. Users can see who posted each post (with the avatar included), the date of each post, the photo, title, and content of each post. Users will be able to access the author's profile page by clicking on the avatar and username of the posted author. Users will be directed to a detailed view of the page when clicking on the post title. 
-There is also a search bar at the top, where users are able to search posts based on content, title, and author. This will help users to be able to search for specific posts they are looking for or posts by a specific author. Logged-in users will be able to see 'edit' and 'delete' icons on their own posts and will be able to access the link to edit their posts, and the link to delete their post. When users click the 'delete' icon, the post will be deleted. Users will only be able to delete their own posts. The functionality of post-editing will be discussed later. Logged-in users will be able to like/unlike to other users' posts by clicking on the heart that is available. Functionality on post will be discussed later. 
-Users will be able to see the most popular profiles on the right-hand side of larger screens, and at the top of the page on smaller screens. The popular profiles will be listed with their avatar and username. The usernames and avatars are clickable and will redirect users to the respective profile page. Popular profiles will be present on all pages except for the 'About', 'Sign Up', 'Create Post', and 'Log in' pages. Logged in users will be able to view the option to follow/unfollow other users. The follow functionality will be touched in the 'Follower' section.
-------------------------Addition of some word--------------------------------------------------------------------- 
-Infinite scroll is incorporated in the homepage to allow users to be able to scroll to view posts without having to navigate back and forth pages to see more posts. This enhances user experience greatly as users will be able to stay more engaged with the website without having to click extra links.
-The homepage is made up of many different React components. The homepage includes the React files of showing Popular profiles and also the React files of listing all posts. 
+### Comments Section 
 
-User stories covered:
+- The section can be found under a post in post detail pages.
+- Can be accessed by clicking the comments icon and post.
+- Allows users to add a comment on a post.
+- Comments can be edited or deleted.
+- Displays the date the comment was posted or edited.
+- All comments can be read by all other users.
+- Editing of other users' comments is not allowed as dropdown menu will not be visible. 
 
-1. As a **user** I can **view user avatars** so that **easily identify users of the website.**
+![Comments Section](docs/features/comment section.JPG)
 
-2. As a **user** I can **see the most followed profiles** so that **I will be able to see who the most popular profiles are.**
+### Post Create Form 
 
-3. As a **user** I can **search for posts or users in a search box** so that **I can quickly find specific posts or users that I am wanting to look for.**
+- Logged in user can access the CURD functionality for post.
+- Post create form contains title, left panel, description and image fields that they can fill and update.
 
-4. As a **user** I can **infinitely scroll down to see more posts and also to see more comments** so that **I can consistently look at more posts/comments without having to click any extra links to view more.**
+![Post Create Form](docs/features/post create.JPG)
 
-5. As a **user** I can **edit posts** so that **I can change my posts, images, etc whenever I change my mind about what I posted or wish to remove/add details.**
+### Post Edit Form 
 
-6. As a **user** I can **delete my posts** so that **I can get rid of my posts that I no longer want to be shared.**
+- Can only be accessed from the post details page by clicking the dropdown menu that can be seen only if the logged in user is the owner of the post as shown 
+- Contains title, leftpanel, description and image fields that they can fill and update.
+- They will be redirected to Post Details page.
 
-7. As a **user** I can **like posts** so that **I can share my appreciation for the post and show the world and the author that their post is great.**
+![Post Edit Form](docs/features/editpage.JPG)
 
-8. As a **user** I can **remove likes on a post** so that **I can change my mind about whether I like the post or not.**
+### Like
 
-9. As a **user** I can **follow or unfollow other users** so that **I can see or choose to remove posts by specific users in my posts feed.**
+- A logged in user can like  post that interests them
+- A logged in user can unlike post if they are not interested in it
+- The liked post will appear in "Liked" page
+- The number the likes recieved by the post can be seen on each page.
 
-10. As a **user** I **cannot edit/delete posts/comments/likes that are not mine** so that **I can be assured that my posts/comments/likes are protected and can only be changed by me.**
+![Like](docs/features/like.JPG)
 
-**Footer**
+### Post Detail Page
 
-![Screenshot of footer](documentation/footer.png)
+- Contains details of a single post - image, title, description (if provided by the user).
+- Contains number of likes and comments the post has
+- Contains like icon to allow user to like the post
+- Features comments section below the post. 
+- Comments add field will be visible to the users.
+- Contains a dropdown menu on the post to allow the owner to edit or delete the post
+The Post Detail page looks like as shown below:
 
-A footer is fixed at the bottom of all pages that is consistent with the styling of the website. The footer is always available so users can see who the creator of this website is. The user is able to go to their GitHub which opens in a separate tab. 
+![Post Detail Page](docs/features/postdetailpage.JPG)
 
-**Detailed Post Page (Minus Comments Section) / Editing Posts**
 
-![Screenshot of detailed post page](documentation/detailedpostpage.png)
+## Components
+A number of the components created are reusable and were used across the website in multiple pages and sections.
 
-![Screenshot of detailed post page author](documentation/detailedpostpage-loggedin.png)
-
-![Screenshot of detailed post editing](documentation/detailedpostpage-editing.png)
-
-When clicking on the title of the post on the homepage, users will be redirected to the detailed view of the post. Here, users will be able to scroll down and view all comments posted on the post. The functionality of comments will be discussed later. The detailed post page has the same information about the page as it is displayed in the homepage, with the username of the author, updated at date, post title, content, and image. The author of the post is clickable to be directed to the user's profile page. The author of the post will be able to view the 'edit' and 'delete' icons at the top of the post. When clicking 'edit', users will be redirected to the edit link where the form is pre-populated with the contents. Users will be able to change their post, including changing the image if they wish, and save. If they wish to cancel, they will be redirected to the previous link (editing the post is also accessible from homepage when the user sees a post they have posted). Logged-in users will be able to like and unlike to other user posts from here by clicking on the hearts. Further functionality on post will be discussed later. Users will only be able to edit their own posts. If a different user tries to tamper with the url to edit another user's post, they will be redirected to the homepage.
-The detailed post page consists of Popular profiles React files, Post React files, and Comment React files. 
-
-User stories covered:
-
-1. As a **user** I can **edit posts** so that **I can change my posts, images, etc whenever I change my mind about what I posted or wish to remove/add details.**
-
-2. As a **user** I can **delete my posts** so that **I can get rid of my posts that I no longer want to be shared.**
-
-3. As a **user** I can **view the details of a post** so that **I can read more information about the post such as when it was created, who created it, if it was edited, read the comments, etc.**
-
-4. As a **user** I can **like posts** so that **I can share my appreciation for the post and show the world and the author that their post is great.**
-
-5. As a **user** I can **remove likes on a post** so that **I can change my mind about whether I like the post or not.**
-
-6. As a **user** I **cannot edit/delete posts/comments/likes that are not mine** so that **I can be assured that my posts/comments/likes are protected and can only be changed by me.**
-
-7. As a **user** I can **view user avatars** so that **easily identify users of the website.**
-
-**Full Functionality of Comments Section**
-
-![Screenshot of comment section with comments](documentation/comment-comments.png)
-
-![Screenshot of comment section logged out](documentation/comment-loggedout.png)
-
-![Screenshot of comment section no comments](documentation/comment-nocomments.png)
-
-![Screenshot of comment section is author](documentation/comment-author.png)
-
-![Screenshot of comment section edit](documentation/comment-edit.png)
-
-![Screenshot of comment section comment ](documentation/comment-re.png)
-
-![Screenshot of comment section comment  author](documentation/commentr-author.png)
-
-All comments (newest first) commented on a specific post are viewed on the detailed view of the post. The comments will show the username, the date of the comment, how many Indo German the comment has, and the avatar of the user. Depending on users' logged-in status and whether comments are already available or not, different messages will appear. If there are no comments and the user is logged out, the comment section will encourage the user to log in or sign up to comment. If there are no comments and the user is logged in, the comment section will encourage the user to comment. Logged-in users will be able to post a comment and add their content. Authors of the comment will be able to view the 'edit' and 'delete' icons. When clicking 'delete', the user's comment will be immediately deleted. When 'edit' is clicked, users can change their comments with the content form pre-populated. Users will be able to like or unlike to other users' comments. If the author tries to Indo German to their own comment, a message will show stating that they are not able to. The comment section has infinite scroll incorporated so users will be able to stay engaged to the comments without having to click extra navigation buttons. Users can click on the avatar or username of the commenter and be directed to their profile page. Users will only be able to delete or edit their own comments. 
-
-**User stories covered**
-
-1. As a **user** I can **only like/unlike other users' posts and comments** so that **I can only show my appreciation for other posts/comments and not cheat the system by liking my own posts/comments.**
-
-2. As a **user** I can **post a comment on a post** so that **I can contribute discussion to a post or share my thoughts about a post.**
-
-3. As a **user** I can **delete my comments on a post** so that **I can remove comments if I no longer want my comments to be public.**
-
-4. As a **user** I can **read comments on a post** so that **I can read what others think about the post and read the discussion happening.**
-
-5. As a **user** I can **edit my comments** so that **have the possibility to remove or add more details to my existing comments.**
-
-6. As a **user** I can **like comments** so that **I can share my appreciation for the comment.**
-
-7. As a **user** I can **unlike comments** so that **I can change my mind about my positive feelings towards a comment.**
-
-8. As a **user** I can **infinitely scroll down to see more posts and also to see more comments** so that **I can consistently look at more posts/comments without having to click any extra links to view more.**
-
-9. As a **user** I can **view user avatars** so that **easily identify users of the website.**
-
-10. As a **user** I **cannot edit/delete posts/comments/likes that are not mine** so that **I can be assured that my posts/comments/likes are protected and can only be changed by me.**
-
-**Post like**
-
-![Screenshot of post ](documentation/post.png)
-
-![Screenshot of post r](documentation/postr-author.png)
-
-Logged-in users will be able like to other users' posts. like and unlike to other users' posts can be done from the homepage, detailed post view, or user profile page. Users can like to posts by clicking on the heart icon, which will turn red when liked. If the user clicks on the heart icon again, it will be unliked and go back to a colourless heart. If users try to like to their own posts, a message will pop up stating that users cannot like to their own posts. 
-Users will be able to access all the posts that they have liked to in the "Feed" link in nav bar.
-
-User stories covered:
-
-1. As a **user** I can **only like/unlike other users' posts and comments** so that **I can only show my appreciation for other posts/comments and not cheat the system by liking my own posts/comments.**
-
-2. As a **user** I can **like posts** so that **I can share my appreciation for the post and show the world and the author that their post is great.**
-
-3. As a **user** I can **remove likes on a post** so that **I can change my mind about whether I like the post or not.**
-
-**Create Post Page**
-
-![Screenshot of post create page](documentation/createpost-page.png)
-
-![Screenshot of post create page validation](documentation/createpost-validation.png)
-
-Logged-in users will be able to create posts by clicking on the 'Create Post' icon in the nav bar. If logged-out users try to access this url, they will automatically be redirected to homepage. On the Create Post page, users will be able to add their image, add a title, and add content. If the user tries to submit the form without adding a photo or title, messages will show to the user explaining the issue. The image upload will only accept image files, and images smaller than 2500px in width and in height, and less than 1MB thanks to the back end set-up for posts. If logged-out users try to access this page, they will be redirected to homepage.
-
-User stories covered:
-
-1. As a **user** I can **create new posts** so that **I can share images, my thoughts, or what I'm doing.**
-
-**Follower**
-
-![Screenshot of follower feature](documentation/follower-loggedin.png)
-
-![Screenshot of follower feature from page](documentation/followerfilepage.png)
-
-Logged-in users will have the functionality of being able to follow other users. In the screenshot above, the user is logged in as Viyan. The user will not have the follow button available for Viyan as users will not be able to follow themselves. If the user is NOT following a user already, a 'Follow' button will pop up beside the username. If the user IS following a user already, an 'Unfollow' button will appear instead. Users will be able to follow other users from the Popular Profiles section, or on the profile pages of other users.
-Users will be able to see all posts posted by their followed users in the "Feed" link in the navigation bar. 
-
-User stories covered:
-
-1. As a **user** I can **only follow other users** so that **I cannot cheat the system and follow myself and gain myself a new, false follower.**
-
-2. As a **user** I can **follow or unfollow other users** so that **I can see or choose to remove posts by specific users in my posts feed.**
-
-**Profile Page**
-
-![Screenshot of filepage-user](documentation/filepage-user.png)
-
-![Screenshot of filepage-edit](documentation/edit.png)
-
-![Screenshot of filepage-changeusername](documentation/changeusername.png)
-
-![Screenshot of filepage-changepassword](documentation/-changepassword.png)
-
-![Screenshot of filepage-other](documentation/-other.png)
-
-On the detailed profile page, users are able to view further details about the user such as how many followers they have, how many users they are following, and how many posts they have posted. Users are able to view all posts the specific user has posted, with infinite scroll incorporated. Users also have access to like or unlike to other users' posts from profile page. When the user views their own profile, they will see icons at the top right corner of being able to change their profile content, username or password. If the user wishes to change profile content, the fields are pre-populated where users can change their avatar photo or 'about me' section. When a user views the detailed profile page of another user, the top right corner is placed with a 'Follow' or 'Unfollow' button instead. Users are able to change their username and changes will apply immediately once successful as all posts will be changed to the changed username as the author. The form will ensure the user is not selecting a username that already exists or else a message will show. If the user tries to change their password, the form will ensure the user is typing in the same password twice as confirmation. 
-
-User stories covered:
-
-1. As a **user** I can **like posts** so that **I can share my appreciation for the post and show the world and the author that their post is great.**
-
-2. As a **user** I can **remove likes on a post** so that **I can change my mind about whether I like the post or not.**
-
-3. As a **user** I can **infinitely scroll down to see more posts and also to see more comments** so that **I can consistently look at more posts/comments without having to click any extra links to view more.**
-
-4. As a **user** I can **view a detailed page of users** so that **I can see their posts and learn more about the user. I can also see their following count, followers count, etc.**
-
-5. As a **user** I can **view user avatars** so that **easily identify users of the website.**
-
-6. As a **user** I can **follow or unfollow other users** so that **I can see or choose to remove posts by specific users in my posts feed.**
-
-### Future Features
-
-- In the future, I would like to include the user's age in days on the profile page as this is added as a serializer in the back end. Users would be able to keep track how long their account has been active for. 
-- In the future, I wish to include a feature where users can private message each other so users can stay more connected.
-- In the future, I wish to include a feature where users can target specific users in their comments section by add '@'.
-- In the future, I wish to include a feature where users can add images to their comments.
-- In the future, I wish to include a feature where users can add a media file instead of an image file if they wish to share a video.
+- `<Asset />` - Asset.js - renders a loading spinner. It is utilized in several places across the site, including showing a loading spinner where API calls are made.
+- `<Avatar />` - Avatar.js - displays a user's profile image. It is used in the Create Panel along with the Username. Passed props allow for setting image source and size and adjust image dimensions depending on where the component is rendered.
+- `<DropdownMenu />` - DropdownMenu.js - reusable component, used to render the dropdown menu which allows user to edit or delete their own posts or comments, and also edit their profile or change profile password. provides a dropdown menu with some additional actions a user can take, such as editing and deleting. 
+- `<NavBar />` - NavBar.js-  reusable component with the content depending on the login status of the user. For logged in user it shows Home, About, Feed and Liked and Sign Out Nav items. For those who are not logged in, it displays icon links to about, sign up or sign in. The component is used on each page of the app.
+- `<PageNotFound />` - PageNotFound.js - specific component to display 404 error message for the url which does not exist.
+- `<PopularProfiles />` - PopularProfiles.js - reusable component showing most followed profiles in the app named as "Active Inspirers". The component displays user avatar, name and follow/unfollow button.
+- `<DeleteModal />` - DeleteModal.js - reusable component, used to render the modal when user want to delete their own post and comment.
 
 
 ## Technologies Used
@@ -565,11 +569,13 @@ User stories covered:
 
 4. [JavaScript](https://www.javascript.com/)
 
-5. [React Bootstrap](https://react-bootstrap.github.io/)
+5. [React Bootstrap](https://react-bootstrap.github.io/) - For styling the site and site responsiveness across various devices
 
-6. [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component)
+6. [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component) - To enable component to load content (posts, recommendations and comments) automatically as the user scrolls towards the bottom of the page without having to jump to next/previous page.
 
-7. [React Router](https://v5.reactrouter.com/web/guides/philosophy)
+7. [React Router](https://v5.reactrouter.com/web/guides/philosophy) - Used for dynamic routing. This library enables the navigation among views of various components and control what the user can see depending on the URL they have accessed in the browser.
+
+8. - [JWT](https://jwt.io/) - A library to decode out JSON Web token. JWT prevents unauthenticated user from making extra network requests to refresh their access token. It is also used to remove the timestamp from the browser when the user refreshes token expires or the user logs out.
 
 ### Programs Used
 
@@ -582,149 +588,107 @@ User stories covered:
 3. [Heroku](https://dashboard.heroku.com/login)
     - Heroku was used to deploy this project. Heroku's Postgres was used as the database.  
 
-4. [Whimsical](https://whimsical.com)
-    - Whimsical was used to create the wireframes for the project. 
-
-5. [ESLint](https://eslint.org/)
-    - ESLint was used to check for errors and syntax of code. 
-
-6. [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+4. [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
     - W3C CSS validator used to check the CSS3 code.
 
-7. [Ecotrust-Canada Markdown-toc](https://ecotrust-canada.github.io/markdown-toc/)
-    - Ecotrust-Canada Markdown was used to create the table of contents for this README. 
-
-8. [Axios](https://axios-http.com/)
+5. [Axios](https://axios-http.com/)
     - Promise based http client for making http requests to the back end API
 
-9. [Cloudinary](https://cloudinary.com/)
+6. [Cloudinary](https://cloudinary.com/)
     - Cloudinary used to host the uploaded images.
 
-10. [Font Awesome](https://fontawesome.com/)
-    - Font Awesome was used for the Fredoka One and Raleway fonts. 
+7. [Font Awesome](https://fontawesome.com/)
+    - Font Awesome was used for the fonts. 
 
-11. [Google Fonts](https://fonts.google.com/)
+8. [Google Fonts](https://fonts.google.com/)
     - Google Fonts was used for the fonts.
 
-12. [Favicon.io](https://favicon.io/)
+9. [Favicon.io](https://favicon.io/)
     - Favicon.io was used for the favicon.
 
 
-## Testing
+## Production
 
-### Validation Testing
+Installations:
 
-- ESlint was downloaded following the instructions [here (credit goes to Ian Meigh)](https://gist.github.com/ianmeigh/8e603b91a38d7829d959402bfcf29d3d). No errors were returned after running through all files (exceptions are node modules, reportWebVitals, setUpTests, json package files). The following rules were added for ESlint: 
+- React library - using the command `npx create-react-app . --template git+https://github.com/Code-Institute-Org/cra-template-moments.git --use-npm`
+For the React project set up
+- react-bootstrap - using the command `npm install react-bootstrap@1.6.3 bootstrap@4.6.0`
+This is used to render the layout and styling of the website. The library makes it easy to create and use standard interface elements that are responsive.
+- react-router-dom - using the command `npm install react-router-dom@5.3.0`
+ This library makes the site navigation easier without the need to refresh the page. In social media sites ith mutiple components, it provides a quick and responsive user experience.
+- axios - installed using command `npm install axios`.It manages the calls to the backend database. Simplifies the API requestsand the included interceptors refresh JSON Web Tokens which the site uses.
+- infinite-scroll-component - installed using command ` npm install react-infinite-scroll-component`.
+It is used to enable infinite scrolling on the Posts and Recommendations components and on comments. Infinite scrolling is a standard feature in all social media sites.
+- jwt decode - Using command `npm install jwt-decode`. Used to remove requests to refresh an access token for signed out users. It enables the refresh token to be decoded so that a timestamp can be put in local storage, if a timestamp does not exist in the user's local storage then access refresh requests will not be made.
 
-![ESlint rules](documentation/eslint-rules.png)
-
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to check CSS code, no errors were returned.
-
-### Manual Testing
-
-- Vigorous manual testing has taken place to test all functionality of the website to ensure everything is in working order. These tests were performed by creating multiple accounts and testing out different features. I have used different computers, I have bugged colleagues and friends to test out the website and create posts, etc. These are lists of results of the manual testing:
-
-**Navigation Bar, Footer, and Authentication Tests**: 
-
-- Navigation bar correctly shows "Home", "About", "Sign Up", and "Login" links at the top when the user is logged out.
-- Navigation bar correctly shows "Home", "About", "Feed", "Create Post", "Feed", and "Log out" links at the top when the user is logged in. Navigation bar also shows current logged-in user's username and avatar at the top beside the logo.
-- Logged-in users successfully get redirected to homepage when trying to access `/login` or `/signup` urls.
-- Navigation bar correctly collapses in smaller screens into a hamburger icon and toggles correctly, and untoggles when user clicks away.
-- Navigation bar is correctly fixed at the top of the page regardless of user scrolling.
-- Footer is correctly fixed at the bottom fo the page regardless of user scrolling.
-- External link in footer successfully opens in a new blank page. 
-- When user is logged in, the "Feed" link will show posts by users they follow.
-- When user is logged in, the "Feed" link will show all the posts the user liked. 
-- Clicking log out will successfully log out the user, and users will know they are logged out as their username will no longer be at the top.
-- If user logs in with incorrect details, they will be prompted with a message.
-- If user tries to sign up with any fields missing, they will be prompted with a message that fields need to be added.
-- If user tries to sign up with two different passwords, they will be prompted with a message that their passwords do not match.
-
-**Homepage Tests**
-
-- Infinite scroll successfully works as the page will produce more posts when more than ten posts are present.
-- The lists of posts are all shown, with the author, date updated, author avatar, post title, image, content, number of likes and comments present.
-- Author and avatar of posts are able clickable and will redirect user to profile page of that user.
-- If user is logged out, hovering over like button will prompt user to log in.
-- If user is logged in and NOT the author of the post, user is able to hover over like button and choose to like or unlike.
-- If user is logged in and IS the author of the post, a message will tell user they are not able to like to their own posts.
-- Number of likes on the post will update accordingly and in real-time. 
-- All liked posts by a user will show up in the "feed" link in navigation.
-- Popular Profiles are present on the right side on larger screens, and present at the top on smaller screens as well as the bottom to follow users. Popular Profiles correctly update based on who has the highest number of followers. Each username is clickable and will direct user to the profile page of the desired user. 
-- If users are logged in, the users they do not already follow will have a 'Follow' button beside the username in Popular Profiles.
-- If users are logged in, the users that they do follow will have an 'Unfollow' button beside the username in Popular Profiles.
-- Users are successfully able to search for posts based on content, title, and author. The search will take one second after the user stops typing before conducting the search. 
-- When the page is loading (the posts, the Popular profiles, or when they type in a search field), the Bootstrap spinner shows successfully.
-- Homepage is fully responsive. 
-
-**Post Tests**
-
-- Logged-in users are able to click "Create Post" and be redirected to the `/post/create` url to create a post. Users will then be able to add an image, title, and content. 
-- Correct validations will show if image field or title field is missing. If image uploaded is not an image, is larger than 2500px in height and in width and larger than 1MB, it will not accept it. If the user types in content larger than 300 characters in the title, an error message will show.
-- Logged out users who try to access `/post/create` url will be redirected to homepage.
-- Placeholder in post create content successfully shows the user's username.
-- Created posts successfully show up on the homepage with the correct date, username, and content shown. The newest post will always be shown at the top of homepage. 
-- Avatar and username of posts are clickable and will redirect user to the profile page.
-- Titles of the posts are clickable and will redirect user to the detailed post page. The correct post will show according to the post id: `/post/{id}`.
-- Likek functionality works exactly the same in detailed post view as well as homepage.
-- Comments linked to the post will show in the detailed post page (Comment tests will be discussed next).
-- Authors of the post can see the icon where they can choose to edit or delete their posts. Prompt messages will show as a ToolTip.
-- Author posts are successfully deleted when author clicks delete.
-- When author chooses to edit post, they will be redirected to the correct link with the post image, title, and content pre-populated in the form field. Users are able to change their post and have the changes saved successfully.
-- Only authors of the post can edit their own posts. Any tampering with the urls will redirect other users to the homepage.
-
-**Comment Tests**
-
-- Posts with no comments will have a message that prompts the user to log in to leave a comment. If the user is logged in, it will prompt the user to leave a comement. If the user is logged out, it will prompt the user to login first.
-- The comment field successfully shows the logged-in username in the content placeholder, as well as their avatar. 
-- All comments on an associated post will be shown newest first. Infinite scroll works successfully as more than ten comments will load.
-- Logged-in users will be able to like to comments. 
-- Logged-in users will be able to hover the like icon where it will turn red. Comments will be successfully like when clicked, or unlike when click. Immediate results will show. 
-- If the author of the comment tries to like to their own post, a message will show stating that users cannot like to their own comments.
-- If logged-out users try to like to comments, a message will show stating to log in to like to comments.
-- Bootstrap spinner successfully shows when comments are being retrieved. 
-- Number of comments on the post will update accordingly to the number of comments there are.
-- Number of like on the comment will update accordingly to the number of likes there are.
-- Users are successfully able to delete their comments and edit their comments.
-- Only authors of the comment can view the icons where they can edit or delete.
-- Deleted comments are deleted immediately.
-- Edited comments are pre-populated with the comment content. Edited changes will show immediately after saving.
-
-**Follower Tests**
-
-- Logged-in users are successfully able to follow users. The amount of follows will update accordingly in detailed profile page.
-- The amount of followers will update accordingly when a user is being followed by another user.
-- In Popular Profiles and detailed profile page of other users, a "Follow" button will show up if the user is not following them already. An 'Unfollow' button will show up if the user is already following them. When clicking these buttons, number of follows/followers will update.
-- Posts posted by followed users will show up in the "Feed" page.
-- Popular Profiles will update accordingly based on who has the highest amount of followers, with the highest at the top of the list.
-- Only logged-in users will view the option to follow or unfollow users.
-
-**Profile Tests**
-
-- Users are successfully able to access detailed profile urls of the username they click.
-- Users will see a "Follow" button for users they do not follow, and 'Unfollow' for users they already follow.
-- When users view their own profile page, they will see three icons where they can edit their profile, change username, or change password.
-- When editing profile, user will be redirected to a link with their profile image and 'about me' pre-populated. Users are successfully able to edit their photo and 'about me' page.
-- When changing username, users will be redirected to page where they can change their username. If user tries to change to username that already exists, user will be notified. When user changes username, the new username will be reflected on all associated posts, comments, etc.
-- When changing passwords, users will be redirected to a page where they can change their password. Users can type in the password and confirm. If user types in unmatching passwords, a message will show saying that passwords do not match.
-- Logged-out users will not see any button to click in detailed post page where the Follow/Unfollow/edit icons are.
-- All posts by the user in their detailed profile page will show up. Infinite scroll successfully works where more than ten posts can show up at a time.
-- Post like functionality works the same when viewing posts in the detailed profile page of the user.
-- Clicking on the title of the posts will still redirect user to the detailed post page of the post. 
-
-**Other Testing**
-
-- Any links within the domain that do not exist will redirect user to the 404 page.
-- Any errors in the back end or server will redirect user to the 500 page. This was tested during the back end logout bug. 
-
-### Bugs 
+## Issues and Fixes
 
 Many bugs have occurred during the development of the front end project. Most notable bugs are listed below:
 
+(1) Issue: When click on like icon in comment box, it showed NaN written instead of number of likes and when refreshed like icon changed into unlike.<br>
+  - Fix: Add get_comment_likes_id function in comment model and replace queryset=comment.object.all with annotate method in view.py file. Also add related_name='comment_likes' in comment field in comment_likes model.
 
+(2) Issue: Collapse NavBar didn't display background color when expend it in small devices.<br>
+  - Fix: Style the NavBarCollapse class with background-color:#fa9455 !important.
+
+(3) Issue: Home nav link is always active even if we are active on another nav link.<br>
+  - Fix: Replace the exact path="/" to "/home" in Route in app.js 
+
+(4) Issue: DeleteModal was not disappear while clicking on delete icon from dropdown menu.<br>
+  - Fix: delete const handle =() => setShowModel(false) from deleteModal.js because it already define in parent component.
+
+(5) Issue: After installing 'eslint' I came accross the error for InfiniteScroll in PostDetailPage, ProfilePage and PostListPage.
+<details>
+<summary>Children props error in Infinite scroll</summary>
+<img src='documentation/children-props-error.png' alt='children props error'>
+</details>
+  - Fix: Remove the children element from infinite scroll and place the code between the tags. 
+<details>
+<summary>Solution of children props error in Infinite scroll</summary>
+<img src='documentation/solution-children-props-error.png' alt='solution of children props'>
+</details>
+
+## Testing
+
+### Performance
+
+#### Google's Lighthouse Performance
+
+##### Desktop Results:
+![Lighthouse Desktop Result](assets/testing/desktopperformance.PNG).
+
+##### Mobile Results:
+![Lighthouse Mobile Result](assets/testing/mobileperformance.PNG).
+
+### Validation
+I used the following validation tools to validate HTML, CSS 
+
+- HTML using [W3C HTML validator](https://validator.w3.org/) was used to validate the HTML of the website.
+All the Django templates html files hava been manually copying the source of the rendered pages and then validating using the W3C Validator. I found some erros and warning messages but These do not seem to affect the functionality of the website.
+
+  - result for [base.html](assets/testing/base.PNG)
+ 
+
+- CSS using [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used for validating the CSS stylesheet. CSS file was tested by manually copying the CSS codes into the manual input option.
+
+  - The result can be seen [here](assets/testing/cssvalidator.PNG).
+
+
+### User Story Testing
+BDD, or Behaviour Driven Development, is the process used to test user stories in a non-technical way, allowing anyone to test the acceptance criteria of user story.
+
+- Link for TESTING.md file:- [Testing Results Here](TESTING)
+
+### Manual Testing
+Testing has taken place continuously throughout the development of the project. Each view was tested regularly. When the outcome was not as expected, debugging took place at that point. An exhaustive list of features were checked on different devices and browsers. They were performed and their scrrenshots can be found in the features section on how the distinct features render. All clickable links redirect to the correct pages.
+
+  - Link for TESTING.md file:- [Testing Results Here](TESTING)
 
 
 ## Deployment
+
+### Heroku
 
 This application has been deployed from GitHub to Heroku by following the steps (these are steps after you have set up the front end project in the Config Vars of the back end project):
 
@@ -733,25 +697,34 @@ This application has been deployed from GitHub to Heroku by following the steps 
 3. Click on create app.
 4. In Terminal of your project, push your changes to GitHub.
 5. Log in to Heroku.com and open the dashboard for your react application (for the front end).
-6. Select the “Deploy” tab in the dashboard
-7. Scroll down to the bottom and then select “Manual deploy”, and choose your repository. 
-8. Wait for your build to complete.
-9. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
+6. Click on the 'Deploy' tab and go to 'Deployment Method' and choose GitHub
+7. Navigate to 'App connected to GitHub' and search for the relevant repository
+8. Select the repository you wish to deploy and click 'Connect'
+9. Scroll down to the bottom and then select “Manual deploy”, and choose your repository. 
+10. Wait for your build to complete.
+11. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
 
-- The following steps were taken for the cloning process: 
+### Connecting to API
 
-1. Log in to **[GitHub](https://github.com/)**.
-2. Click on the profile icon to locate **'Your repositories'**. 
-3. On the repository page, click on the repository you wish to clone.
-4. Under **'Code'**, see the different cloning options, HTTPS, SSH, and GitHub CLI. Click the preferred cloning option, and then copy the link provided. 
-5. Open **Terminal**.
-6. In Terminal, change the current working directory to the desired location of the cloned directory.
-7. Type git clone, and then paste the URL copied from GitHub earlier. 
-8. Type **Enter** to create the local clone. 
+ - Navigate to the Heroku app for Be-Inspired_DRF_API project and under the 'Settings' tab add the following config vars: Key: Client_Origin and Key: Client_Origin_Dev 
+- Ensure that the trailing '/' of the value of these key is removed from the end of both links and save the config vars.
+- Install the Axios package, and create the supporting axiosDefaults.js file
 
-## Credits
+### Final Deployment
 
-### Code
+1. Comment out all the console.log within the codes.
+2. Navigate to package.json and in the scripts section add the following command:
+```
+"heroku-prebuild": "npm install -g serve,"
+```
+3. Add a Procfile to the root of the project with the following:
+```
+web: serve -s build
+```
+4. Git add, commit and push your code
+5. Navigate to Heroku and deploy the project via the deploy button under the 'Deploy' 
+
+## Credits and Resources
 
 - [Code Institute Moments Project](Solutions)
     - Functionality of the project credit goes to Code Institute. Comments are made along the project of where code is used from Code Institute's Moments project. 
@@ -765,9 +738,6 @@ This application has been deployed from GitHub to Heroku by following the steps 
 - [React Bootstrap](https://react-bootstrap.github.io/)
     - Components from React Bootstrap were used in the project (Navigation bar, forms, cards, etc).
 
-- [Ian Meigh](https://github.com/ianmeigh/property-direct-frontend/blob/main/USERSTORIES.md)
-    - Ian Meigh has been a huge help during my project. He has helped me debug countless number of bugs, helped me with some of the functionality of reyakking comments, and guided me through the logout bug. Ian Meigh's tutorial on ESlint was used for ESlint testing.
-
 - [Medium](https://medium.com/)
     - Medium was referred to for information on how import multiple classes, how to use React Bootstrap syntax, etc. 
 
@@ -780,4 +750,4 @@ This application has been deployed from GitHub to Heroku by following the steps 
 
 - Thank you to CI Slack Channel for taking time out of their day to answer my questions.
 
-- A huge thank you to Ian Meigh again for helping me survive the Advanced Front-End module. This project couldn't have been completed without him.
+- My Mentor Mr. Akshat Garg for his guidance and advice during the project.

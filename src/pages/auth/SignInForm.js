@@ -128,7 +128,7 @@ import styles from "../../styles/SignInForm.module.css";
 import logoImage from "../../assets/logo.jpg";
 import btnStyles from "../../styles/Button.module.css";
 // import shadowStyles from "../../App.module.css";
-import {Form, Button, Container, Alert} from 'react-bootstrap';
+import { Form, Button, Container, Alert } from 'react-bootstrap';
 // /
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
@@ -145,43 +145,38 @@ const LoginForm = () => {
   const setCurrentUser = useSetCurrentUser();
   useRedirect("loggedIn");
 
-  const [loginData, setloginData] = useState({
+  const [signInData, setSignInData] = useState({
     username: "",
     password: "",
   });
+  const { username, password } = signInData;
 
   const [errors, setErrors] = useState({});
 
-  const { username, password } = loginData;
-
   const history = useHistory();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await axios.post("/dj-rest-auth/login/", signInData);
+      setCurrentUser(data.user);
+      // setTokenTimestamp(data);
+      history.goBack();
+    } catch (err) {
+      setErrors(err.response?.data);
+    }
+  };
 
   const handleChange = (event) => {
-    setloginData({
-      ...loginData,
+    setSignInData({
+      ...signInData,
       [event.target.name]: event.target.value,
     });
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const { data } = await axios.post("/dj-rest-auth/login/", loginData);
-      setCurrentUser(data.user);
-      // setTokenTimestamp(data);
-      history(-1);
-    } catch (err) {
-      // console.log(err)
-      setErrors(err.response?.data);
-      if (err.response?.status === 500) {
-        history("/500");
-      }
-    }
-  };
-
   return (
     <Container className={styles.Container}>
-    {/* <Container className={`bg-white col-md-8 ${shadowStyles.Shadow}`}> */}
+      {/* <Container className={`bg-white col-md-8 ${shadowStyles.Shadow}`}> */}
       <Row className="p-4 mt-5 justify-content-md-center">
         <Col className="text-center">
           <Image className={styles.LogoImage} src={logoImage} />
