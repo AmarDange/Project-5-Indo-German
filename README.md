@@ -1,8 +1,8 @@
 # Welcome to **[ Indo German (PP5)](https://indo-german-pp5-e488026ec98b.herokuapp.com/)**
 
 ## PERSPECTIVE
-The main reason behind this App is to help or provide information about immigrants in Germnay or India
-The main motive is to provide information about eduation, Places to visist, food, Visa. The attempt of the project is to create a social media App to connect like minded people who wish to help people who are coming to germany or india. Some bais points are shared on this App where people get basic idea from Countrues of India and germany.
+The main reason behind this App is to help or provide information to immigrants in Germnay or India.
+The main motive is to provide information about eduation, Places to visit, food, Visa. The attempt of the project is to create a social media App to connect people who wish to help others who are coming to germany or india. Some base points are shared on this App where people get basic idea from India and germany.
 
 
 ![Screenshot of Am I Responsive](docs/features/amiresponsive.JPG)
@@ -44,7 +44,6 @@ The main motive is to provide information about eduation, Places to visist, food
 	- [Colours](<#colours>)
 	- [Typography](<#typography>)
 	- [Imagery](<#imagery>)
-	- [Wireframes](<#wireframes>)
 - [Features](<#features>)
 - [Components](<#components>)
 - [Technologies Used](#technologies-used)
@@ -72,8 +71,8 @@ The main motive is to provide information about eduation, Places to visist, food
 
 ### Site Goals
 
-- "Indo German" is a social media App mainly meant for everyone who is looking to socialize and share their experince while living in abroad and share thoughts with others.
-- The goal of the website is to serve as a social media platform for all ages of different users. Users should be able to create an account without an email address to not compromise their personal data. Users are able to create accounts, log in, post whatever they wish with a title, content, and image, make comments on other users' posts, and like other users' posts and comments. Users also have the freedom to personalize their profile by adding their own profile display photo and changing their 'Bio' section. Users have the freedom to edit and delete their posts and comments. A site like this is needed because, today, security is a huge issue. Making a social media account with Twitter, Facebook, Reddit typically asks for your email address and you would have to give away personal information. With Indo German, there are no ties to you and your personal life. You create an account, post anonymously and of your free will, and continue living your secure life.
+- "Indo German" is a social media App mainly made for everyone who is looking to socialize and share their expereince while living in abroad and share thoughts with others.
+- The goal of the website is to serve as a social media platform for all ages of different users. Users should be able to create an account without an email address and do not compromise their personal data. Users are able to create accounts, log in, post whatever they wish with a title, content, and image, make comments on other user's posts, and like other user's posts and comments. Users also have the freedom to personalize their profile by adding their own profile display photo and changing their 'Bio' section. Users have the freedom to edit and delete their posts and comments. A site like this is needed because, today, security is a huge issue. Making a social media account with Twitter, Facebook, Reddit typically asks for your email address and you would have to give away personal information. With Indo German, there are no ties to you and your personal life. You create an account, post anonymously and of your free will, and continue living your secure life.
 
 ### User Personas
 As mentioned in Site Goals, the users expected to be visiting this website regularly are going anyone seeking information or any experince while living in Germany or India. User can search information on this app, if they want to plan come to germany or India. I created 4 fictional characters which represents the target users. The user personas with their needs, goals and frustrations are enlisted, which helped me design this website with a point of view of distinct users.
@@ -118,7 +117,7 @@ The link to User Personas can be found [here](docs/agile/user_personas.pdf).
 
 
 ## Epics and User Stories
-8 Epics were created which were further developed into 34 User Stories.Many of the user stories are worded similarly to the Moments walkthrough project because the functionality is quite similar - especially with navigation and authentication, posts, likes and comments.
+8 Epics were created which were further developed into 30 User Stories.Many of the user stories are worded similarly to the Moments walkthrough project because the functionality is quite similar - especially with navigation and authentication, posts, likes and comments.
 
 ### 1. Website UI
 
@@ -163,7 +162,6 @@ The link to User Personas can be found [here](docs/agile/user_personas.pdf).
 2. Home page with posts list with infinite scroll visible to all
 3. Navigation routing
 4. Navigation conditional rendering
-5. 404 page
 
 **Related User Stories**
 
@@ -272,7 +270,10 @@ I used a kanban board to help organize the user stories and tasks required for t
 
 <details>
 <summary>Screenshot of Kanban Board Part 1</summary>
-<img src='documentation/kanban-1.png' alt='kanban board part 1'>
+<img src='docs/agile/US1.JPG' alt='kanban board part 1'>
+<img src='docs/agile/US2.JPG' alt='kanban board part 2'>
+<img src='docs/agile/US3.JPG' alt='kanban board part 3'>
+<img src='docs/agile/US4.JPG' alt='kanban board part 4'>
 </details>
 
 ### Outline of Sprints
@@ -353,9 +354,9 @@ There are so many feaures I wish to build upon. But due to severe time constrain
 ## Design
 
 ### Colours
-	- The colour scheme has considered based on easy accessibility for all. 
-	- Complimentarity was key feature in color selection, to give it a pleasant feel for all age groups.
-	- The colors have been rendered differently for posts, so that user can easily distinguish between the
+- The colour scheme has considered based on easy accessibility for all. 
+- Complimentarity was key feature in color selection, to give it a pleasant feel for all age groups.
+- The colors have been rendered differently for posts, so that user can easily distinguish between the
 
 
 ### Typography
@@ -363,13 +364,6 @@ The fonts are taken from [Google Fonts](https://fonts.google.com/about).
 
 ### Imagery
 The imagery on the website has been seleced according to the post requirement. Many images were taken from Google Images.
-
-### Wireframes
-
-The wireframes were generated using Balsamiq. The wireframes can be found in these links:<br>
-[Wireframes for Desktop](documentation/wireframes/Desktop-wireframes.pdf)<br>
-[Wireframes for Tablet](documentation/wireframes/Tablet-Wireframes.pdf)<br>
-[Wireframes for Mobile](documentation/wireframes/Mobile-wireframes.pdf)
 
 
 ## Features
@@ -410,7 +404,7 @@ As shown here:
 - Users can easily log out of the website by clicking the 'Log Out' link that appears when users are signed in. T
 
 ![Navigation Bar on landing Page](docs/features/landingpagenavbar.JPG)
-![Navigation Bar on Home Page](docs/features/landingpage.JPG)
+![Navigation Bar on Home Page](docs/features/navbar.JPG)
 
 
 **About Page**
@@ -506,14 +500,14 @@ As shown on link provided:
 - All comments can be read by all other users.
 - Editing of other users' comments is not allowed as dropdown menu will not be visible. 
 
-![Comments Section](docs/features/comment section.JPG)
+![Comments Section](docs/features/commentsection.JPG)
 
 ### Post Create Form 
 
 - Logged in user can access the CURD functionality for post.
 - Post create form contains title, left panel, description and image fields that they can fill and update.
 
-![Post Create Form](docs/features/post create.JPG)
+![Post Create Form](docs/features/postcreate.JPG)
 
 ### Post Edit Form 
 
