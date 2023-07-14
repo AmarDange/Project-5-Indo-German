@@ -775,7 +775,9 @@ web: serve -s build
     - Medium was referred to for information on how import multiple classes, how to use React Bootstrap syntax, etc. 
 
 - [React Router Documentation](https://v5.reactrouter.com/web/guides/quick-start)
-    - React Router documentation was referred to for the use of routes, useNavigate, and how to show the active links in navbar. 
+    - React Router documentation was referred to for the use of routes, useNavigate, and how to show the active links in navbar.
+
+- Followed the project of one of my friend who is also a CI student Roshna Vakeel 
 
 ### Acknowledgements
 
