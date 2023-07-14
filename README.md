@@ -382,7 +382,10 @@ The imagery on the website has been seleced according to the post requirement. M
 - Contains user guidance to Sign in Sign Up links
 As shown here:
 
-![Landing Page](docs/features/landingpage.JPG)
+<details>
+<summary>Landing Page</summary>
+<img src='docs/features/landingpage.JPG'>
+</details>
 
 **Home Page**
 
@@ -390,7 +393,10 @@ As shown here:
 - Homepage provides the user with some quick information about the site and make use of all its features. 
 - User do not need to be registered to view a blog post. The responsive navigation bar is featured on all pages.
 
-![Home Page](docs/features/homepage.JPG)
+<details>
+<summary>Home Page</summary>
+<img src='docs/features/homepage.JPG'>
+</details>
 
 **Navigation Bar**
 
@@ -403,8 +409,15 @@ As shown here:
 - The navigation bar is fully responsive as it collapses into a hamburger icon on smaller screens. 
 - Users can easily log out of the website by clicking the 'Log Out' link that appears when users are signed in. T
 
-![Navigation Bar on landing Page](docs/features/landingpagenavbar.JPG)
-![Navigation Bar on Home Page](docs/features/navbar.JPG)
+<details>
+<summary>Navigation Bar on landing Page</summary>
+<img src='docs/features/landingpagenavbar.JPG'>
+</details>
+
+<details>
+<summary>Navigation Bar on Home Page</summary>
+<img src='docs/features/navbar.JPG'>
+</details>
 
 
 **About Page**
@@ -414,8 +427,10 @@ As shown here:
 - Users will be reminded of the functionality of the website such as the capability of being able to edit/delete posts and comments, not being able to like to their own posts/comments, the character limit of titles and content, etc. 
 - All of the information a new user or returning user would possibly need will be found on this page.
 
-![About Page](docs/features/aboutpage.JPG)
-
+<details>
+<summary>About Page</summary>
+<img src='docs/features/aboutpage.JPG'>
+</details>
 
 ### Feed page
 
@@ -423,17 +438,25 @@ As shown here:
 - The posts are displayed in a single list, styled as cards for clean separation between posts.
 - Each post includes a title, description and image, along with Like and Comments icons showing number they received.
 - Clicking on heart icon adds a like to the post.
-- Clicking on comments icon takes user to the slected post's detail page which displays all the comments the post recieved.
+- Clicking on comments icon takes user to the selected post's detail page which displays all the comments the post recieved.
 - Enabled with infinite scroll feature.
 
-![Feed Page](docs/features/feedpage.JPG)
+<details>
+<summary>Feed Page</summary>
+<img src='docs/features/feedpage.JPG'>
+</details>
+
 
 ### Sign Up Link and Form
 - Allows users to create an account
 - Users must provide a valid username and enter their preferred password twice for confirmation
 As shown on link provided: 
 
-![Sign Up](docs/features/signup.JPG)
+<details>
+<summary>Sign Up</summary>
+<img src='docs/features/signup.JPG'>
+</details>
+
 
 ### Sign In Link and Form
 - Allows registered users to login to their account
@@ -441,7 +464,10 @@ As shown on link provided:
 - Displays errors if the username or password is wrong or the input is invalid
 As shown on link provided: 
 
-![Sign In](docs/features/signin.JPG)
+<details>
+<summary>Sign In</summary>
+<img src='docs/features/signin.JPG'>
+</details>
 
 
 ### Post Section (Home)
@@ -452,7 +478,10 @@ As shown on link provided:
 - Clicking on heart icon adds a like to the post.
 - Clicking on comments icon takes user to the post detail page which displays all the comments the post recieved. 
 
-![Post Section](docs/features/postsectionhome.JPG)
+<details>
+<summary>Post Section</summary>
+<img src='docs/features/postsectionhome.JPG'>
+</details>
 
 ### Left panel
 
@@ -460,7 +489,10 @@ As shown on link provided:
 - user can create new post.
 - User can open own profile to edit in new window
 
-![Left panel](docs/features/leftpanel.JPG)
+<details>
+<summary>Left panel</summary>
+<img src='docs/features/leftpanel.JPG'>
+</details>
 
 ### Liked page
 
@@ -471,14 +503,20 @@ As shown on link provided:
 - Clicking on comments icon takes user to the slected post's detail page which displays all the comments the post recieved.
 - Enabled with infinite scroll feature.
 
-![Liked Page](docs/features/likedpage.JPG)
+<details>
+<summary>Liked Page</summary>
+<img src='docs/features/likedpage.JPG'>
+</details>
 
 ### Search Feature
 
 - By typing a query in the search bar users can find a specific post they are looking for
 - Allows to search through all post title, word or author name
 
-![Search Bar](docs/features/searchbar.JPG)
+<details>
+<summary>Search Bar</summary>
+<img src='docs/features/searchbar.JPG'>
+</details>
 
 ### Popular Profiles
 
@@ -487,8 +525,10 @@ As shown on link provided:
 - The component displays user avatar, name and follow/unfollow button.
 - - Users are able to follow a specific profile they like and then be able to easily view their posts in the Feed.
 
-![Popular Profiles](docs/features/popularprofile.JPG)
-
+<details>
+<summary>Popular Profiles</summary>
+<img src='docs/features/popularprofile.JPG'>
+</details>
 
 ### Comments Section 
 
@@ -500,14 +540,20 @@ As shown on link provided:
 - All comments can be read by all other users.
 - Editing of other users' comments is not allowed as dropdown menu will not be visible. 
 
-![Comments Section](docs/features/commentsection.JPG)
+<details>
+<summary>Comments Section</summary>
+<img src='docs/features/commentsection.JPG'>
+</details>
 
 ### Post Create Form 
 
 - Logged in user can access the CURD functionality for post.
 - Post create form contains title, left panel, description and image fields that they can fill and update.
 
-![Post Create Form](docs/features/postcreate.JPG)
+<details>
+<summary>Post Create Form</summary>
+<img src='docs/features/postcreate.JPG'>
+</details>
 
 ### Post Edit Form 
 
@@ -515,7 +561,10 @@ As shown on link provided:
 - Contains title, leftpanel, description and image fields that they can fill and update.
 - They will be redirected to Post Details page.
 
-![Post Edit Form](docs/features/editpage.JPG)
+<details>
+<summary>Post Edit Form</summary>
+<img src='docs/features/editpage.JPG'>
+</details>
 
 ### Like
 
@@ -524,7 +573,11 @@ As shown on link provided:
 - The liked post will appear in "Liked" page
 - The number the likes recieved by the post can be seen on each page.
 
-![Like](docs/features/like.JPG)
+<details>
+<summary>Like</summary>
+<img src='docs/features/like.JPG'>
+</details>
+
 
 ### Post Detail Page
 
@@ -536,8 +589,10 @@ As shown on link provided:
 - Contains a dropdown menu on the post to allow the owner to edit or delete the post
 The Post Detail page looks like as shown below:
 
-![Post Detail Page](docs/features/postdetailpage.JPG)
-
+<details>
+<summary>Post Detail Page</summary>
+<img src='docs/features/postdetailpage.JPG'>
+</details>
 
 ## Components
 A number of the components created are reusable and were used across the website in multiple pages and sections.
@@ -663,7 +718,6 @@ BDD, or Behaviour Driven Development, is the process used to test user stories i
 Testing has taken place continuously throughout the development of the project. Each view was tested regularly. When the outcome was not as expected, debugging took place at that point. An exhaustive list of features were checked on different devices and browsers. They were performed and their scrrenshots can be found in the features section on how the distinct features render. All clickable links redirect to the correct pages.
 
   - Link for TESTING.md file:- [Testing Results Here](TESTING)
-
 
 ## Deployment
 
