@@ -39,7 +39,7 @@ const SignUpForm = () => {
       await axios.post("/dj-rest-auth/registration/", signUpData);
       history.push("/Signin");
     } catch (err) {
-      console.log(err)
+      console.log('ERROR COMING FROM API REQUEST: ', err)
       setErrors(err.response?.data);
       if (err.response?.status === 500) {
         history("/500");

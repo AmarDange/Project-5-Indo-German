@@ -739,7 +739,7 @@ This application has been deployed from GitHub to Heroku by following the steps 
 
 ### Connecting to API
 
- - Navigate to the Heroku app for Be-Inspired_DRF_API project and under the 'Settings' tab add the following config vars: Key: Client_Origin and Key: Client_Origin_Dev 
+ - Navigate to the Heroku app for Indo german_DRF_API project and under the 'Settings' tab add the following config vars: Key: Client_Origin and Key: Client_Origin_Dev 
 - Ensure that the trailing '/' of the value of these key is removed from the end of both links and save the config vars.
 - Install the Axios package, and create the supporting axiosDefaults.js file
 
