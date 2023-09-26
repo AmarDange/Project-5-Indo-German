@@ -14,7 +14,8 @@ console.log(popularProfiles)
         mobile && "d-lg-none text-center mb-3"
       }`}
     >
-      {popularProfiles.results.length ? (
+      {/* {popularProfiles.results.length ? ( */}
+      {popularProfiles?.results?.length ? (
         <>
           <p>Most followed profiles.</p>
           {mobile ? (
