@@ -91,7 +91,7 @@ function PostsListPage({ message, filter = "" }) {
 
                     {hasLoaded ? (
                         <>
-                            {posts.results.length ? (
+                            {posts.results?.length ? (
                                 <Container className="p-0">
                                     <InfiniteScroll
                                         children={
