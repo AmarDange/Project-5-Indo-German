@@ -19,6 +19,8 @@ const Comment = (props) => {
     id,
     setPost,
     setComments,
+    comment_likes_id,
+    comment_likes_count,
   } = props;
 
   const [showEditForm, setShowEditForm] = useState(false);
