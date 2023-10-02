@@ -7,6 +7,7 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
 
+
 const Post = (props) => {
   const {
     id,
@@ -22,6 +23,8 @@ const Post = (props) => {
     updated_at,
     setPosts,
   } = props;
+
+  
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
